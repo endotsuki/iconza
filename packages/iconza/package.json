@@ -1,9 +1,9 @@
 {
-  "name": "icoza",
-  "version": "1.0.27",
+  "name": "iconza",
+  "version": "1.0.28",
   "private": false,
   "description": "A modern, accessible icon set with original brand colors, full TypeScript support, and delightful animations.",
-  "homepage": "https://icoza.vercel.app",
+  "homepage": "https://iconza.vercel.app",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",

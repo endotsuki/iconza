@@ -1,4 +1,4 @@
-# Icoza
+# iconza
 
 A modern, developer‑friendly, colorful SVG icon library and website.
 
@@ -13,7 +13,7 @@ Live app (dev): `/` homepage, `/docs` documentation.
 
 ```
 packages/
-  icoza/            # Icon component library (source)
+  iconza/            # Icon component library (source)
 client/                     # Docs website (SPA) built with Vite + React Router
 server/                     # Express server used during dev
 shared/                     # Shared types
@@ -42,10 +42,10 @@ pnpm start        # Starts the built server
 
 ## Using the icon package
 
-Once published to npm as `icoza`:
+Once published to npm as `iconza`:
 
 ```tsx
-import { Icon } from "icoza";
+import { Icon } from "iconza";
 
 export default function Example() {
   return (
@@ -93,7 +93,7 @@ function YourPage() {
 ```
 
 3. Default SEO values are pre-configured for:
-- Base title suffix: "| Icoza"
+- Base title suffix: "| iconza"
 - Default description
 - Open Graph metadata
 - Twitter Cards
@@ -113,7 +113,7 @@ The SEO component automatically handles:
 Icons are defined by category files under:
 
 ```
-packages/icoza/src/categories/
+packages/iconza/src/categories/
   AI.ts
   Apps.ts
   DesignTools.ts
@@ -134,12 +134,12 @@ interface IconData {
 }
 ```
 
-The component factory lives at `packages/icoza/src/createIcon.tsx` and safely renders colorful SVG using `dangerouslySetInnerHTML` with width/height normalization.
+The component factory lives at `packages/iconza/src/createIcon.tsx` and safely renders colorful SVG using `dangerouslySetInnerHTML` with width/height normalization.
 
 To add an icon:
 
 1) Pick a category file (or create a new one) and append a new `IconData` with original brand SVG (no color stripping).
-2) Export the component name by adding it to `packages/icoza/src/index.ts` (it auto‑builds components from the data set and re‑exports named icons).
+2) Export the component name by adding it to `packages/iconza/src/index.ts` (it auto‑builds components from the data set and re‑exports named icons).
 
 ## Accessibility
 
@@ -148,7 +148,7 @@ To add an icon:
 
 ## Publishing the package to npm
 
-The repository includes source TypeScript in `packages/icoza`. To publish a compiled package, use `tsup` (or Vite library mode). Suggested setup:
+The repository includes source TypeScript in `packages/iconza`. To publish a compiled package, use `tsup` (or Vite library mode). Suggested setup:
 
 1) Install build tool in the root repo:
 
@@ -156,7 +156,7 @@ The repository includes source TypeScript in `packages/icoza`. To publish a comp
 pnpm add -D tsup typescript
 ```
 
-2) Create `packages/icoza/tsup.config.ts` (example):
+2) Create `packages/iconza/tsup.config.ts` (example):
 
 ```ts
 import { defineConfig } from "tsup";
@@ -171,11 +171,11 @@ export default defineConfig({
 });
 ```
 
-3) Update `packages/icoza/package.json`:
+3) Update `packages/iconza/package.json`:
 
 ```json
 {
-  "name": "icoza",
+  "name": "iconza",
   "version": "0.1.0",
   "private": false,
   "type": "module",
@@ -194,7 +194,7 @@ export default defineConfig({
 4) Build & publish from the root:
 
 ```bash
-pnpm --filter icoza build
+pnpm --filter iconza build
 npm publish --access public
 ```
 

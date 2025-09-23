@@ -4,7 +4,7 @@ A production-ready full-stack React application template with integrated Express
 
 While the starter comes with a express server, only create endpoint when strictly neccesary, for example to encapsulate logic that must leave in the server, such as private keys handling, or certain DB operations, db...
 
-## Update .svg icons that convert from [SVG viewer](https://www.svgviewer.dev/) in File [DesignTools](packages/icoza/src/categories/DesignTools.ts)
+## Update .svg icons that convert from [SVG viewer](https://www.svgviewer.dev/) in File [DesignTools](packages/iconza/src/categories/DesignTools.ts)
 - ## Example
 
 ### 1. PhotoShop

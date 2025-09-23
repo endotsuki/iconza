@@ -55,7 +55,7 @@ export default function Docs() {
                   <CodeBlock
                     language="bash"
                     filename="terminal"
-                    code={`npm install icoza`}
+                    code={`npm install iconza`}
                   />
                 </StepCard>
 
@@ -63,7 +63,7 @@ export default function Docs() {
                   <CodeBlock
                     language="jsx"
                     filename="App.tsx"
-                    code={`import { Icon } from "icoza";
+                    code={`import { Icon } from "iconza";
 
 export default function App() {
   return (

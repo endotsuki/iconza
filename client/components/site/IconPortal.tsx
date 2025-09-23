@@ -1,4 +1,4 @@
-import { allIconsData, icons } from "../../../packages/icoza/src/index.ts";
+import { allIconsData, icons } from "../../../packages/iconza/src/index.ts";
 import { IconDetailDialog } from "./IconDetailDialog";
 
 const components = icons as Record<string, React.ComponentType<{ size?: number; className?: string; "aria-label"?: string }>>;

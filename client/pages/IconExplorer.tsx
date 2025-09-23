@@ -13,7 +13,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Categories } from "../../packages/icoza/src";
+import { Categories } from "../../packages/iconza/src";
 import { IconGrid } from "../components/site/IconExplorer/IconGrid";
 import { categories, iconsMap } from "../components/site/IconExplorer/iconUtils";
 import { SiteHeader } from "../components/site/SiteHeader";
@@ -102,10 +102,10 @@ export function IconExplorer() {
                 language="jsx"
                 filename="App.tsx"
                 code={`// Install
-npm install icoza
+npm install iconza
 
 // Import & Use
-import { Icon } from 'icoza'
+import { Icon } from 'iconza'
 <Icon name="React" size={24} />`}
                 highlightLines={[2, 5]}
               />

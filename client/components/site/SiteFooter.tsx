@@ -14,7 +14,7 @@ export function SiteFooter() {
               to="/"
               className="font-medium text-neutral-800 dark:text-neutral-200 hover:text-lime-500 transition-colors"
             >
-              Icoza
+              iconza
             </Link>
             . All rights reserved.
           </p>
@@ -31,7 +31,7 @@ export function SiteFooter() {
           </p>
           <span className="text-neutral-300 dark:text-neutral-700">|</span>
           <a
-            href="https://github.com/socheatsok78/icoza"
+            href="https://github.com/socheatsok78/iconza"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub Repository"

@@ -25,8 +25,8 @@ export function SiteHeader() {
       >
         <Link to="/" className="flex items-center gap-2">
           <img
-            src="/icoza.avif"
-            alt="icoza"
+            src="/iconza.avif"
+            alt="iconza"
             className="h-10 w-10 hover:scale-105 transition-transform duration-200"
           />
         </Link>

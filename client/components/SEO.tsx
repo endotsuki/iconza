@@ -13,17 +13,17 @@ interface SEOProps {
 }
 
 export function SEO({
-  title = 'icoza',
+  title = 'iconza',
   description = 'A modern, accessible icon set with original brand colors, full TypeScript support, and delightful animations.',
-  image = '/icoza.avif',
-  url = 'https://icoza.vercel.app',
+  image = '/iconza.avif',
+  url = 'https://iconza.vercel.app',
   type = 'website',
   canonical,
-  keywords = 'icon library, react icons, developer icons, brand icons, icoza, svg icons, website icons, animated icons, accessible icons',
-  author = 'icoza',
+  keywords = 'icon library, react icons, developer icons, brand icons, iconza, svg icons, website icons, animated icons, accessible icons',
+  author = 'iconza',
   children,
 }: SEOProps) {
-  const siteTitle = title.includes('icoza') ? title : `${title} | icoza`;
+  const siteTitle = title.includes('iconza') ? title : `${title} | iconza`;
 
   return (
     <Helmet>
@@ -38,7 +38,7 @@ export function SEO({
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
       <meta property="og:url" content={url} />
-      <meta property="og:site_name" content="icoza" />
+      <meta property="og:site_name" content="iconza" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -60,15 +60,15 @@ export function SEO({
 
       {/* Chrome, Firefox, Edge */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-      <link rel="icon" type="image/avif" href="/icoza.avif" media="(prefers-color-scheme: dark)" />
+      <link rel="icon" type="image/avif" href="/iconza.avif" media="(prefers-color-scheme: dark)" />
       
       {/* Microsoft Edge */}
       <meta name="msapplication-TileColor" content="#94c748" />
-      <meta name="msapplication-TileImage" content="/icoza.avif" />
+      <meta name="msapplication-TileImage" content="/iconza.avif" />
 
       {/* Safari */}
-      <link rel="apple-touch-icon" href="/icoza.avif" />
-      <meta name="apple-mobile-web-app-title" content="icoza" />
+      <link rel="apple-touch-icon" href="/iconza.avif" />
+      <meta name="apple-mobile-web-app-title" content="iconza" />
 
       {/* Chrome for Android */}
       <meta name="mobile-web-app-capable" content="yes" />

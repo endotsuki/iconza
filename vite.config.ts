@@ -29,7 +29,7 @@ export default defineConfig(({ mode }) => ({
     alias: {
       "@": path.resolve(__dirname, "./client"),
       "@shared": path.resolve(__dirname, "./shared"),
-      "icoza": path.resolve(__dirname, "./packages/icoza/src/index.ts"),
+      "iconza": path.resolve(__dirname, "./packages/iconza/src/index.ts"),
     },
   },
   base: '/',

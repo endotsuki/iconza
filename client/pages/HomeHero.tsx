@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { CodeBlock } from "@/components/ui/code-block";
 import { SEO } from "@/components/SEO";
-import { icons } from "../../packages/icoza/src/index.ts";
-import pkg from "../../packages/icoza/package.json";
+import { icons } from "../../packages/iconza/src/index.ts";
+import pkg from "../../packages/iconza/package.json";
 import { FlipWords } from "../components/ui/flip-words.tsx";
 import { SiteHeader } from "../components/site/SiteHeader.tsx";
 import { SiteFooter } from "../components/site/SiteFooter.tsx";
@@ -43,7 +43,7 @@ const heroList = [
 ] as const;
 export async function getStaticProps() {
   const res = await fetch(
-    "https://api.npmjs.org/downloads/point/last-week/icoza",
+    "https://api.npmjs.org/downloads/point/last-week/iconza",
   );
   const data = await res.json();
 
@@ -112,12 +112,12 @@ interface NpmStats {
 const steps = [
   {
     title: "Install the package",
-    description: "Run 'npm install icoza' in your project directory.",
+    description: "Run 'npm install iconza' in your project directory.",
   },
   {
     title: "Import icons",
     description:
-      "Import any icon from 'icoza' and use it in your components.",
+      "Import any icon from 'iconza' and use it in your components.",
   },
   {
     title: "Customize",
@@ -135,7 +135,7 @@ export function HomeHero() {
         const endDate = new Date().toISOString().split("T")[0];
 
         const response = await fetch(
-          `https://api.npmjs.org/downloads/point/${startDate}:${endDate}/icoza`,
+          `https://api.npmjs.org/downloads/point/${startDate}:${endDate}/iconza`,
         );
         const data: NpmStats = await response.json();
         setTotalDownloads(data.downloads);
@@ -185,7 +185,7 @@ export function HomeHero() {
                 <CodeBlock
                   language="bash"
                   filename="terminal"
-                  code={`npm install icoza`}
+                  code={`npm install iconza`}
                 />
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
@@ -257,7 +257,7 @@ export function HomeHero() {
         <section className="py-24 bg-white/50 dark:bg-gray-950/50">
           <div className="max-w-7xl mx-auto px-4 text-center mb-16">
             <h2 className="text-3xl sm:text-6xl font-medium text-gray-900 dark:text-white">
-              Why Choose Icoza?
+              Why Choose iconza?
             </h2>
             <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               Built by developers, for developers. Every icon is crafted with
@@ -321,7 +321,7 @@ export function HomeHero() {
               Get Started in Minutes
             </h2>
             <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Install Icoza and start building beautiful interfaces
+              Install iconza and start building beautiful interfaces
               right away.
             </p>
           </motion.div>
@@ -387,7 +387,7 @@ export function HomeHero() {
             >
               <Terminal>
                 <TypingAnimation delay={0}>
-                  $ npm install icoza
+                  $ npm install iconza
                 </TypingAnimation>
                 <AnimatedSpan className="text-lime-500">
                   ✔ Installed successfully!

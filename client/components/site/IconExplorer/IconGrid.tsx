@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { IconItem } from "./IconItem";
 import { IconEmptyState } from "./IconEmptyState";
-import { icons } from "../../../../packages/icoza/src";
+import { icons } from "../../../../packages/iconza/src";
 
 export function IconGrid({ category, size, query, data, viewMode }) {
   const visible = data.filter((i) => category === "All" || i.category === category);
