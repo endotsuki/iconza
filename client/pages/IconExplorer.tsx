@@ -138,6 +138,10 @@ import { Icon } from 'iconza'
                 <IconSlash size={18} />
               </kbd>
             </div>
+
+          </div>
+
+          <div className="flex flex-col lg:flex-row gap-4 lg:items-center lg:justify-between mb-4">
             <div className="flex items-center gap-2">
               {[{ mode: "grid", icon: IconLayoutGrid }, { mode: "list", icon: IconListDetails }].map(({ mode, icon: Icon }) => (
                 <button
@@ -150,37 +154,6 @@ import { Icon } from 'iconza'
                 </button>
               ))}
             </div>
-          </div>
-
-          <div className="flex flex-col lg:flex-row gap-4 lg:items-center lg:justify-between mb-4">
-            <div className="flex items-center gap-4">
-              <span className="text-sm font-medium whitespace-nowrap">Size</span>
-              <Box sx={{ width: 300 }} className="flex-1">
-                <Slider
-                  min={16}
-                  max={55}
-                  value={size}
-                  onChange={(_, v) => setSize(typeof v === "number" ? v : v[0])}
-                  valueLabelDisplay="off"
-                />
-              </Box>
-              <span className="text-sm text-gray-500 dark:text-gray-400 text-right tabular-nums">
-                {size}px
-              </span>
-              <button
-                type="button"
-                onClick={() => setSize(40)}
-                title="Reset size"
-                className="group p-2 rounded-lg bg-lime-500/10 dark:bg-lime-500/10 backdrop-blur-md shadow-md text-white border border-lime-500/30 hover:shadow-lg transition-colors duration-300"
-              >
-                <IconRestore
-                  size={20}
-                  className="rotate-180 transition-transform duration-300 group-hover:rotate-0"
-                />
-              </button>
-
-            </div>
-            {/* Dropdown */}
             <DropdownMenu open={dropdownOpen} onOpenChange={(open) => setDropdownOpen(open)}>
               <DropdownMenuTrigger asChild>
                 <button
