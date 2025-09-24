@@ -10,7 +10,6 @@ import { SiteFooter } from "../components/site/SiteFooter.tsx";
 import { HeroBackground } from "../components/ui/shap-loading-hero.tsx";
 import {
   IconArrowRight,
-  IconBook,
   IconRocket,
   IconColorFilter,
   IconTextResize,
@@ -26,6 +25,7 @@ import {
 } from "../components/ui/terminal.tsx";
 import { NumberTicker } from "../components/ui/number-ticker.tsx";
 import { useState, useEffect } from "react";
+import Button from "@/components/ui/go-btn.tsx";
 
 const heroList = [
   "BehanceFill",
@@ -198,28 +198,7 @@ export function HomeHero() {
                       </span>
                     </button>
                   </Link>
-
-                  <Link to="/docs">
-                    <button className="group relative inline-flex h-12 overflow-hidden rounded-full px-4 border border-zinc-500 bg-white/5 hover:bg-white/10 transition-colors">
-                      <span className="absolute inset-0 overflow-hidden rounded-full">
-                        <span className="absolute inset-0 rounded-full bg-[radial-gradient(75%_100%_at_50%_0%,rgba(132,204,22,0.4)_0%,rgba(132,204,22,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                      </span>
-                      <div className="relative z-10 text-black dark:text-white flex items-center gap-2 transition-all duration-300">
-                        <IconBook
-                          size={20}
-                          className="transition-transform duration-300 group-hover:-translate-x-9"
-                        />
-                        <span className="transition-transform duration-300 group-hover:-translate-x-4">
-                          View Documentation
-                        </span>
-                        <IconArrowRight
-                          size={20}
-                          className="transition-transform duration-300 translate-x-9 group-hover:translate-x-0"
-                        />
-                      </div>
-                      <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-lime-500/0 via-lime-500 to-lime-500/0 opacity-0 transition-opacity duration-500 group-hover:opacity-40" />
-                    </button>
-                  </Link>
+                  <Button color="#84cc16" text="View Document" to="/docs" />
                 </motion.div>
               </div>
             </div>
