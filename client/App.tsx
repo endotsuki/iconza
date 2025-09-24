@@ -7,6 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { lazy, Suspense, useEffect, useMemo, useState, StrictMode } from "react";
 import { Loading } from "@/components/ui/loading";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { FloatingSocialButtons } from "./components/ui/FloatingSocialButtons";
 
 const LazyBackground = lazy(() => import("./components/ui/LazyBackground"));
 const Toaster = lazy(() => import("@/components/ui/toaster").then(mod => ({ default: mod.Toaster })));
@@ -95,6 +96,7 @@ const App = () => {
           )}
           <RouterProvider router={router} />
           <SpeedInsights />
+          <FloatingSocialButtons />
         </TooltipProvider>
       </QueryClientProvider>
     </HelmetProvider>
