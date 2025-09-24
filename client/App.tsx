@@ -11,7 +11,6 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 const LazyBackground = lazy(() => import("./components/ui/LazyBackground"));
 const Toaster = lazy(() => import("@/components/ui/toaster").then(mod => ({ default: mod.Toaster })));
 const Sonner = lazy(() => import("@/components/ui/sonner").then(mod => ({ default: mod.Toaster })));
-const PageTransition = lazy(() => import("@/components/site/PageTransition").then(mod => ({ default: mod.PageTransition })));
 
 const HomeHero = lazy(() => import("@/pages/HomeHero").then(mod => ({ default: mod.HomeHero })));
 const IconExplorer = lazy(() => import("@/pages/IconExplorer").then(mod => ({ default: mod.IconExplorer })));

@@ -158,7 +158,7 @@ import { Icon } from 'iconza'
               <DropdownMenuTrigger asChild>
                 <button
                   className={cn(
-                    "group inline-flex items-center rounded-full px-4 py-2 text-sm font-medium transition-all duration-300",
+                    "group inline-flex items-center rounded-full px-4 py-3 text-sm font-medium transition-all duration-300",
                     "bg-zinc-900/10 dark:bg-zinc-800/40 backdrop-blur border border-white/30 dark:border-zinc-700",
                   )}
                 >
