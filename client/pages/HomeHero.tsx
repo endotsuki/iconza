@@ -196,7 +196,6 @@ export function HomeHero() {
                           Explore All Icons
                         </span>
                       </span>
-                      I hope this is gonna work
                     </button>
                   </Link>
                   <Button color="#84cc16" text="View Document" to="/docs" />
