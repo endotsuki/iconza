@@ -47,23 +47,6 @@ export function SiteFooter() {
       { name: "Documentation", href: "/docs", icon: IconFileDescription },
       { name: "Contact", href: "/contact", icon: IconMessage },
     ],
-    social: [
-      {
-        name: "GitHub",
-        href: "https://github.com/tabler/tabler-icons",
-        icon: IconBrandGithub,
-      },
-      {
-        name: "Twitter",
-        href: "https://twitter.com/tabler_icons",
-        icon: IconBrandX,
-      },
-      {
-        name: "Email",
-        href: "mailto:hello@iconflow.com",
-        icon: IconMail,
-      },
-    ],
     stats: [
       { value: Object.keys(icons).length, label: "Icons", icon: IconStar },
       { value: totalDownloads, label: "Downloads", icon: IconDownload }, // Use state here
@@ -91,21 +74,6 @@ export function SiteFooter() {
               A modern icon library built for developers. Beautiful, consistent,
               and easy to use icons for your next project.
             </p>
-
-            <div className="flex space-x-5">
-              {navigation.social.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={item.name}
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-primary hover:text-white transition duration-300 shadow-md hover:shadow-lg"
-                >
-                  <item.icon className="h-6 w-6" />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Right Columns */}
