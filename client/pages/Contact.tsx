@@ -4,6 +4,7 @@ import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { IconAlertTriangle, IconBug, IconIcons, IconLoader2, IconMessage, IconPaperclip, IconQuote, IconSend, IconX } from "@tabler/icons-react";
 import { HeroBackground } from "@/components/ui/shap-loading-hero";
+import { SEO } from "@/components/SEO";
 
 const ContactPage = () => {
   const [form, setForm] = useState({ name: '', message: '' });
@@ -98,6 +99,7 @@ const ContactPage = () => {
 
   return (
     <div className="min-h-screen bg-white dark:bg-black relative overflow-hidden">
+      <SEO title="Contact" description="Browse and search through our extensive collection of modern, accessible icons with brand colors and animations." />
       <HeroBackground className="pointer-events-none z-0" />
       <div className="relative z-10">
         <SiteHeader />

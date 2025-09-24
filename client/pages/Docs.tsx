@@ -6,13 +6,13 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Highlighter } from "@/components/ui/highlighter";
 import { IconArrowRight } from "@tabler/icons-react";
+import { SEO } from "@/components/SEO";
 
 export default function Docs() {
   return (
     <div className="min-h-screen bg-transparent">
-
+      <SEO title="Documentation" description="Browse and search through our extensive collection of modern, accessible icons with brand colors and animations." />
       <SiteHeader />
-
       <main className="mx-auto max-w-4xl px-6 pt-32 pb-20">
         {/* Hero */}
         <motion.section

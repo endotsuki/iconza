@@ -13,14 +13,14 @@ interface SEOProps {
 }
 
 export function SEO({
-  title = 'iconza',
+  title = 'Iconza',
   description = 'A modern, accessible icon set with original brand colors, full TypeScript support, and delightful animations.',
   image = '/iconza.avif',
   url = 'https://iconza.vercel.app',
   type = 'website',
   canonical,
   keywords = 'icon library, react icons, developer icons, brand icons, iconza, svg icons, website icons, animated icons, accessible icons',
-  author = 'iconza',
+  author = 'Iconza',
   children,
 }: SEOProps) {
   const siteTitle = title.includes('iconza') ? title : `${title} | iconza`;
