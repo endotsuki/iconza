@@ -162,14 +162,14 @@ export function IconDetailDialog(props: IconDetailProps) {
               <div className="flex gap-4">
                 <button
                   onClick={handleCopy}
-                  className="flex-1 flex items-center justify-center gap-2 rounded-full border bg-white/20 dark:bg-gray-900/30 border-white/30 dark:border-gray-700/50 text-zinc-800 dark:text-zinc-200 backdrop-blur-md shadow-sm transition hover:bg-white/30 dark:hover:bg-gray-900/60 hover:shadow-md focus-visible:outline-none px-4 py-2 font-semibold text-sm"
+                  className="flex-1 flex items-center justify-center gap-2 rounded-full border bg-white/20 dark:bg-gray-900/30 border-white/30 dark:border-gray-700/50 text-zinc-800 dark:text-zinc-200 backdrop-blur-md shadow-sm transition hover:bg-white/30 dark:hover:bg-gray-900/60 hover:shadow-md focus-visible:outline-none px-4 py-3 font-semibold text-sm"
                 >
                   {copied ? <IconChecks size={15} /> : <IconCopy size={15} />}
                   Copy
                 </button>
                 <button
                   onClick={downloadSvg}
-                  className="flex-1 flex items-center justify-center gap-2 rounded-full border bg-white/20 dark:bg-gray-900/30 border-white/30 dark:border-gray-700/50 text-zinc-800 dark:text-zinc-200 backdrop-blur-md shadow-sm transition hover:bg-white/30 dark:hover:bg-gray-900/60 hover:shadow-md focus-visible:outline-none px-4 py-2 font-semibold text-sm"
+                  className="flex-1 flex items-center justify-center gap-2 rounded-full border bg-white/20 dark:bg-gray-900/30 border-white/30 dark:border-gray-700/50 text-zinc-800 dark:text-zinc-200 backdrop-blur-md shadow-sm transition hover:bg-white/30 dark:hover:bg-gray-900/60 hover:shadow-md focus-visible:outline-none px-4 py-3 font-semibold text-sm"
                 >
                   <IconDownload size={16} />
                   Download
