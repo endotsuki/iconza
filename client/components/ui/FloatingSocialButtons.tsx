@@ -15,25 +15,25 @@ export const FloatingSocialButtons = () => {
       href: "https://github.com/yourusername",
       icon: <IconBrandGithub size={20} stroke={1.5} />,
       label: "GitHub",
-      color: "hover:bg-gray-900",
+      color: "hover:text-gray-100",
     },
     {
       href: "https://linkedin.com/in/yourusername",
       icon: <IconBrandLinkedin size={20} stroke={1.5} />,
       label: "LinkedIn",
-      color: "hover:bg-blue-600",
+      color: "hover:text-blue-600",
     },
     {
       href: "https://t.me/yourusername",
       icon: <IconBrandTelegram size={20} stroke={1.5} />,
       label: "Telegram",
-      color: "hover:bg-[#0088cc]",
+      color: "hover:text-[#0088cc]",
     },
     {
       href: "https://buymeacoffee.com/onimuxha",
       icon: <IconCup size={20} stroke={1.5} />,
       label: "Buy Me a Coffee",
-      color: "hover:bg-amber-500",
+      color: "hover:text-amber-500",
     },
   ];
 
