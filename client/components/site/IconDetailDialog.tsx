@@ -1,23 +1,36 @@
-import * as React from 'react';
+import * as React from "react";
 import { useMemo, useState } from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-import { IconDownload, IconCopy, IconChecks, IconRestore } from '@tabler/icons-react';
+import {
+  IconDownload,
+  IconCopy,
+  IconChecks,
+  IconRestore,
+} from "@tabler/icons-react";
 import { toast } from "sonner";
 import { motion } from "framer-motion";
 import { copyText } from "@/lib/copy";
 import { CodeBlock } from "@/components/ui/code-block";
-import Box from '@mui/material/Box';
-import Slider from '@mui/material/Slider';
+import Box from "@mui/material/Box";
+import Slider from "@mui/material/Slider";
 import { cn } from "@/lib/utils";
 import { DialogDescription } from "@/components/ui/dialog";
-
 
 export interface IconDetailProps {
   open: boolean;
   onOpenChange: (v: boolean) => void;
   name: string;
-  Component: React.ComponentType<{ size?: number; className?: string; "aria-label"?: string }>;
+  Component: React.ComponentType<{
+    size?: number;
+    className?: string;
+    "aria-label"?: string;
+  }>;
   svgContent: string;
   category: string;
   keywords: string[];
@@ -60,13 +73,14 @@ export function IconDetailDialog(props: IconDetailProps) {
       toast.error("Copy failed");
     }
   };
+  const [copiedName, setCopiedName] = useState<string | null>(null);
+  const [showTooltip, setShowTooltip] = useState(false);
 
   if (!open) return null;
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent
-        className="rounded-2xl max-w-4xl w-[95vw] px-5 py-10 max-h-[90vh] overflow-hidden bg-white/40 dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800 shadow-xl">
+      <DialogContent className="rounded-2xl max-w-4xl w-[95vw] px-5 py-10 max-h-[90vh] overflow-hidden bg-white/40 dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800 shadow-xl">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -79,8 +93,33 @@ export function IconDetailDialog(props: IconDetailProps) {
                 <div className="w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
                   <Component size={30} />
                 </div>
-                <div className="flex text-left flex-col">
-                  <span className="text-xl font-medium">{name}</span>
+                <div className="flex text-left flex-col relative">
+                  <button
+                    onClick={() => {
+                      navigator.clipboard.writeText(name);
+                      setCopiedName(name);
+                      setShowTooltip(true);
+                      setTimeout(() => {
+                        setShowTooltip(false);
+                        setTimeout(() => setCopiedName(null), 300);
+                      }, 2000);
+                    }}
+                    onMouseEnter={() => !showTooltip && setShowTooltip(true)}
+                    onMouseLeave={() => !copiedName && setShowTooltip(false)}
+                    className="text-xl font-medium hover:text-lime-500 transition-colors duration-200 cursor-pointer text-left relative"
+                  >
+                    {name}
+
+                    {showTooltip && (
+                      <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-black text-white text-sm px-3 py-2 rounded-md whitespace-nowrap z-10">
+                        {copiedName === name
+                          ? `✓ Copied "${name}"`
+                          : `Click to copy "${name}"`}
+                        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1 w-2 h-2 bg-black rotate-45"></div>
+                      </div>
+                    )}
+                  </button>
+
                   <p className="text-base font-medium text-gray-500 dark:text-gray-400">
                     {keywords.slice(0, 3).join(", ")}
                   </p>
@@ -118,7 +157,9 @@ export function IconDetailDialog(props: IconDetailProps) {
                       min={16}
                       max={100}
                       value={size}
-                      onChange={(_, value) => setSize(typeof value === "number" ? value : value[0])}
+                      onChange={(_, value) =>
+                        setSize(typeof value === "number" ? value : value[0])
+                      }
                       valueLabelDisplay="off"
                       sx={{
                         "& .MuiSlider-thumb": {
@@ -141,7 +182,6 @@ export function IconDetailDialog(props: IconDetailProps) {
                       className="rotate-180 transition-transform duration-300 group-hover:rotate-0"
                     />
                   </button>
-
                 </div>
               </div>
 
@@ -151,7 +191,7 @@ export function IconDetailDialog(props: IconDetailProps) {
                     "absolute inset-0",
                     "[background-size:20px_20px]",
                     "[background-image:radial-gradient(#d4d4d4_1px,transparent_1px)]",
-                    "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]"
+                    "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]",
                   )}
                 />
                 <div className="inline-flex items-center justify-center rounded-xl p-4 backdrop-blur-lg bg-black/5 dark:bg-white/5 border border-white/30 dark:border-white/10 shadow-[inset_0_2px_6px_rgba(0,0,0,0.15)] dark:shadow-[inset_0_2px_6px_rgba(255,255,255,0.08)] relative z-10">
@@ -185,29 +225,32 @@ export function IconDetailDialog(props: IconDetailProps) {
                   type="single"
                   value={mode}
                   onValueChange={(v) => v && setMode(v as any)}
-                  className="flex gap-2 bg-transparent">
+                  className="flex gap-2 bg-transparent"
+                >
                   <ToggleGroupItem
                     value="jsx"
                     size="sm"
-                    className="rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 data-[state=on]:bg-zinc-100 dark:data-[state=on]:bg-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">
+                    className="rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 data-[state=on]:bg-zinc-100 dark:data-[state=on]:bg-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+                  >
                     JSX
                   </ToggleGroupItem>
                   <ToggleGroupItem
                     value="svg"
                     size="sm"
-                    className="rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 data-[state=on]:bg-zinc-100 dark:data-[state=on]:bg-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors">
+                    className="rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 data-[state=on]:bg-zinc-100 dark:data-[state=on]:bg-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+                  >
                     SVG
                   </ToggleGroupItem>
                 </ToggleGroup>
-
               </div>
 
               <CodeBlock
                 language={mode === "jsx" ? "tsx" : "xml"}
                 filename={`${name}.${mode}`}
-                code={mode === "jsx" ?
-                  `import { Icon } from "iconza";\n\n${jsxCode}` :
-                  svgMin
+                code={
+                  mode === "jsx"
+                    ? `import { Icon } from "iconza";\n\n${jsxCode}`
+                    : svgMin
                 }
                 highlightLines={mode === "jsx" ? [3] : undefined}
               />
