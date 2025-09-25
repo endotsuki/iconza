@@ -91,9 +91,7 @@ export function SiteFooter() {
           {/* Brand Section */}
           <div className="lg:col-span-2 space-y-6">
             <Link to="/" className="inline-flex items-center space-x-3 group">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-lime-500/10 border border-lime-500/20">
-                <img src="/iconza.avif" alt="iconza" className="h-8 w-8" />
-              </div>
+              <img src="/iconza.avif" alt="iconza" className="h-8 w-8" />
               <span className="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                 IconZa
               </span>
@@ -110,6 +108,7 @@ export function SiteFooter() {
                 <a
                   key={item.name}
                   href={item.href}
+                  target="_blank"
                   className={`p-2 rounded-lg bg-gray-800/50 border border-gray-700 text-gray-400 transition-all duration-200 ${item.color} hover:border-lime-500/30 hover:scale-110`}
                   aria-label={item.name}
                 >
@@ -121,10 +120,10 @@ export function SiteFooter() {
 
           {/* Navigation Section */}
           <div>
-            <h3 className="text-lg font-bold text-white mb-6 flex items-center gap-2">
+            <span className="text-lg font-semibold text-white mb-6 flex items-center gap-2">
               <div className="w-2 h-2 bg-lime-500 rounded-full"></div>
               Navigation
-            </h3>
+            </span>
             <ul className="space-y-4">
               {navigation.main.map(({ name, href, icon: Icon }) => (
                 <li key={name}>
@@ -132,7 +131,7 @@ export function SiteFooter() {
                     to={href}
                     className="flex items-center space-x-3 text-gray-400 hover:text-lime-400 transition-all duration-200 group text-sm font-medium py-2"
                   >
-                    <Icon className="h-4 w-4 transition-transform group-hover:scale-110" />
+                    <Icon className="h-5 w-5 transition-transform group-hover:scale-110" />
                     <span className="group-hover:translate-x-1 transition-transform">
                       {name}
                     </span>
@@ -144,10 +143,10 @@ export function SiteFooter() {
 
           {/* Stats Section */}
           <div>
-            <h3 className="text-lg font-bold text-white mb-6 flex items-center gap-2">
+            <span className="text-lg font-semibold text-white mb-6 flex items-center gap-2">
               <div className="w-2 h-2 bg-lime-500 rounded-full"></div>
               Statistics
-            </h3>
+            </span>
             <div className="grid gap-4">
               {navigation.stats.map(({ value, label, icon: Icon }) => (
                 <div
@@ -174,7 +173,8 @@ export function SiteFooter() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-gray-800">
+        <div className="mt-16 h-px bg-gradient-to-r from-transparent via-lime-500/50 to-transparent"></div>
+        <div className="mt-8">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-4 lg:space-y-0">
             <div className="flex items-center space-x-4 text-gray-400 text-sm">
               <span>&copy; {year} IconZa. All rights reserved.</span>
@@ -188,9 +188,6 @@ export function SiteFooter() {
               <span className="text-sm">for the developer community</span>
             </div>
           </div>
-
-          {/* Gradient Accent */}
-          <div className="mt-6 h-px bg-gradient-to-r from-transparent via-lime-500/50 to-transparent"></div>
         </div>
       </div>
     </footer>

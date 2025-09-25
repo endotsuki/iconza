@@ -42,7 +42,7 @@ export const FloatingSocialButtons = () => {
       {/* Desktop Version (lg and above) */}
       <aside
         className={cn(
-          "fixed right-6 bottom-1/4 z-50 hidden lg:flex",
+          "fixed right-4 top-2/4 z-50 translate-y-24 hidden lg:flex",
           "bg-black/80 backdrop-blur-xl border border-lime-500/30",
           "rounded-2xl shadow-2xl p-3 flex-col gap-3",
           "transform transition-all duration-300 hover:scale-105",
