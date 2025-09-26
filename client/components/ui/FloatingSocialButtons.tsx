@@ -61,14 +61,14 @@ export const FloatingSocialButtons = () => {
           <div className="relative w-6 h-6 flex items-center justify-center">
             <div
               className={cn(
-                "absolute w-5 h-0.5 bg-black transition-all duration-300",
+                "absolute w-5 h-0.5 bg-white transition-all duration-300",
                 "transform",
                 isOpen ? "rotate-45" : "rotate-0",
               )}
             />
             <div
               className={cn(
-                "absolute w-5 h-0.5 bg-black transition-all duration-300",
+                "absolute w-5 h-0.5 bg-white transition-all duration-300",
                 "transform",
                 isOpen ? "-rotate-45" : "rotate-0",
               )}
@@ -76,7 +76,7 @@ export const FloatingSocialButtons = () => {
             {!isOpen && (
               <div
                 className={cn(
-                  "absolute w-0.5 h-5 bg-black transition-all duration-300",
+                  "absolute w-0.5 h-5 bg-white transition-all duration-300",
                   "transform",
                   isOpen ? "scale-0 opacity-0" : "scale-100 opacity-100",
                 )}
