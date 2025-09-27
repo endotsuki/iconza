@@ -47,10 +47,10 @@ const useEscapeKey = (onClose: () => void) => {
 
 const getTypeIcon = (type: string) => {
   switch (type) {
-    case 'added': return <IconCodePlus className="h-4 w-4 text-lime-500" />;
-    case 'updated': return <IconRefresh className="h-4 w-4 text-blue-500" />;
-    case 'fixed': return <IconBug className="h-4 w-4 text-amber-500" />;
-    default: return <IconCodePlus className="h-4 w-4 text-gray-500" />;
+    case 'added': return <IconCodePlus size={20} className="text-lime-500" />;
+    case 'updated': return <IconRefresh size={20} className="text-blue-500" />;
+    case 'fixed': return <IconBug size={20} className="text-amber-500" />;
+    default: return <IconCodePlus size={20} className="text-gray-500" />;
   }
 };
 
@@ -173,15 +173,26 @@ const VersionCard = ({ version, isLatest }: { version: VersionEntry; isLatest: b
 
 const transformToTimelineEntries = (versions: VersionEntry[]) => {
   return versions.map(version => ({
-    title: new Date(version.date).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    }),
+    title: (
+      <span className={version.date === versionHistory[0].date ? "text-lime-500" : "text-neutral-400"}>
+        {new Date(version.date).toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        })}
+      </span>
+    ),
     content: (
       <div className="space-y-6">
-        <div className="text-neutral-400 text-sm">
-          Version {version.version}
+        <div className="flex items-center gap-2">
+          <div className="text-neutral-400 text-sm">
+            Version {version.version}
+          </div>
+          {version.date === versionHistory[0].date && (
+            <span className="px-2 py-0.5 bg-lime-500/10 text-lime-400 text-xs rounded-md border border-lime-500/20">
+              Latest
+            </span>
+          )}
         </div>
 
         <div className="space-y-4">

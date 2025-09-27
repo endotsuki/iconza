@@ -5,11 +5,11 @@ import {
   useTransform,
   motion,
 } from "motion/react";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, ReactNode } from "react";
 
 interface TimelineEntry {
-  title: string;
-  content: React.ReactNode;
+  title: ReactNode;
+  content: ReactNode;
 }
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {

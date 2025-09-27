@@ -39,8 +39,26 @@ const checkForDuplicateIcons = (history: VersionEntry[]) => {
 
 export const versionHistory: VersionEntry[] = [
   {
-    date: "2025-09-26",
+    date: "2025-09-27",
     version: "1.0.32",
+    changes: [
+      {
+        type: "added",
+        category: "Frameworks",
+        description: "Added new web framework icons",
+        icons: ["CakePHP", "Apache", "Amp", "Ionic"],
+      },
+      {
+        type: "added",
+        category: "Programming",
+        description: "Added new programming language icons",
+        icons: ["Git", "Scala", "GraphQL", "EtaLang", "Arduino"],
+      },
+    ],
+  },
+  {
+    date: "2025-09-26",
+    version: "1.0.31",
     changes: [
       {
         type: "added",
