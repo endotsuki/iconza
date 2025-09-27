@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { versionHistory, VersionEntry } from '../../packages/iconza/src/versionHistory';
 import { IconCalendar, IconTag, IconCodePlus, IconRefresh, IconBug, IconX } from "@tabler/icons-react";
+import { Timeline } from './Timeline';
 
 interface VersionHistoryProps {
   isOpen: boolean;
@@ -16,7 +17,7 @@ const usePreventBodyScroll = (isOpen: boolean) => {
       document.body.style.top = `-${scrollY}px`;
       document.body.style.width = '100%';
       document.body.style.overflow = 'hidden';
-      
+
       return () => {
         document.body.style.position = '';
         document.body.style.top = '';
@@ -37,7 +38,7 @@ const useEscapeKey = (onClose: () => void) => {
     };
 
     document.addEventListener('keydown', handleEscape);
-    
+
     return () => {
       document.removeEventListener('keydown', handleEscape);
     };
@@ -83,7 +84,7 @@ export const VersionHistory = ({ isOpen, onClose }: VersionHistoryProps) => {
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
-            <div className="border-b border-gray-800 p-6">
+            <div className="border-b border-gray-800 py-4 px-6">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <IconTag className="h-6 w-6 text-lime-500" />
@@ -94,21 +95,17 @@ export const VersionHistory = ({ isOpen, onClose }: VersionHistoryProps) => {
                 </div>
                 <button
                   onClick={onClose}
-                  className="p-2 rounded-lg bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-white transition-colors"
+                  className="p-1 rounded-lg bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-white transition-colors"
                   aria-label="Close version history"
                 >
-                  <IconX className="h-5 w-5" />
+                  <IconX size={20} className="transition-transform duration-300 group-hover:rotate-90"/>
                 </button>
               </div>
             </div>
 
             {/* Content */}
-            <div className="overflow-y-auto max-h-[calc(80vh-120px)] p-6">
-              <div className="space-y-8">
-                {versionHistory.map((version, index) => (
-                  <VersionCard key={version.version} version={version} isLatest={index === 0} />
-                ))}
-              </div>
+            <div className="overflow-y-auto max-h-[calc(80vh-120px)]">
+              <Timeline data={transformToTimelineEntries(versionHistory)} />
             </div>
           </motion.div>
         </motion.div>
@@ -122,11 +119,10 @@ const VersionCard = ({ version, isLatest }: { version: VersionEntry; isLatest: b
     {isLatest && (
       <div className="absolute -left-1 top-0 w-2 h-2 bg-lime-500 rounded-full"></div>
     )}
-    
+
     <div className="flex items-center gap-3 mb-3">
-      <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-        isLatest ? 'bg-lime-500/20 text-lime-400' : 'bg-gray-800 text-gray-400'
-      }`}>
+      <span className={`px-3 py-1 rounded-full text-sm font-semibold ${isLatest ? 'bg-lime-500/20 text-lime-400' : 'bg-gray-800 text-gray-400'
+        }`}>
         v{version.version}
       </span>
       <span className="text-gray-500 text-sm flex items-center gap-1">
@@ -154,9 +150,9 @@ const VersionCard = ({ version, isLatest }: { version: VersionEntry; isLatest: b
             </span>
             <span className="text-sm text-gray-400">{change.category}</span>
           </div>
-          
+
           <p className="text-white text-sm">{change.description}</p>
-          
+
           {change.icons && change.icons.length > 0 && (
             <div className="flex flex-wrap gap-1 mt-2">
               {change.icons.map((icon) => (
@@ -174,3 +170,49 @@ const VersionCard = ({ version, isLatest }: { version: VersionEntry; isLatest: b
     </div>
   </div>
 );
+
+const transformToTimelineEntries = (versions: VersionEntry[]) => {
+  return versions.map(version => ({
+    title: new Date(version.date).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    }),
+    content: (
+      <div className="space-y-6">
+        <div className="text-neutral-400 text-sm">
+          Version {version.version}
+        </div>
+
+        <div className="space-y-4">
+          {version.changes.map((change, idx) => (
+            <div key={idx} className="p-4 rounded-lg bg-neutral-900/50 border border-neutral-800">
+              <div className="flex items-center gap-2 mb-3">
+                {getTypeIcon(change.type)}
+                <span className={`px-2 py-1 rounded-full text-xs font-medium ${getTypeColor(change.type)}`}>
+                  {change.type.charAt(0).toUpperCase() + change.type.slice(1)}
+                </span>
+                <span className="text-sm text-neutral-400">{change.category}</span>
+              </div>
+
+              <p className="text-neutral-200 text-sm">{change.description}</p>
+
+              {change.icons && change.icons.length > 0 && (
+                <div className="flex flex-wrap gap-2 mt-3">
+                  {change.icons.map((icon) => (
+                    <span
+                      key={icon}
+                      className="px-2 py-1 bg-lime-500/10 text-lime-400 text-xs rounded-full border border-lime-500/20"
+                    >
+                      {icon}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    ),
+  }));
+};
