@@ -75,7 +75,7 @@ export function SiteHeader() {
             <div className="flex items-center gap-3">
               <button
                 onClick={() => setShowHistory(true)}
-                className="hidden group relative sm:inline-flex h-10 sm:h-12 overflow-hidden rounded-full p-px"
+                className="hidden group relative sm:inline-flex h-10 sm:h-12 overflow-hidden rounded-full p-px focus:outline-none"
               >
                 <div className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#94c748_0%,#000000_50%,#94c748_100%)]" />
                 <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-6 sm:px-8 text-xs sm:text-sm font-medium text-white backdrop-blur-3xl gap-2">

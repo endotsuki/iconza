@@ -40,6 +40,17 @@ const checkForDuplicateIcons = (history: VersionEntry[]) => {
 
 export const versionHistory: VersionEntry[] = [
   {
+    date: "2025-09-28",
+    version: "1.0.32",
+    changes: [
+      {
+        type: "updated",
+        category: "Icons explorer",
+        description: "Added  source link to each icon",
+      },
+    ],
+  },
+  {
     date: "2025-09-27",
     version: "1.0.32",
     changes: [

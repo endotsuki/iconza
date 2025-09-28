@@ -26,12 +26,10 @@ const featureList = [
   "Multiple styles (outline, solid, etc.)",
 ];
 
-
-
 export function IconExplorer() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [query, setQuery] = useState("");
-  const [size, setSize] = useState(40);
+  const [size] = useState(40);
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
 
   const [tab, setTab] = useState(() => {
@@ -140,7 +138,6 @@ import { Icon } from 'iconza'
                 <IconSlash size={18} />
               </kbd>
             </div>
-
           </div>
 
           <div className="flex flex-col lg:flex-row gap-4 lg:items-center lg:justify-between mb-4">
@@ -169,7 +166,7 @@ import { Icon } from 'iconza'
               <DropdownMenuTrigger asChild>
                 <button
                   className={cn(
-                    "group inline-flex items-center rounded-full px-4 py-3 text-sm font-medium transition-all duration-300",
+                    "group inline-flex items-center rounded-full px-4 py-3 text-sm font-medium",
                     "bg-zinc-800/40 backdrop-blur border border-zinc-700",
                   )}
                 >
