@@ -29,7 +29,7 @@ export default {
         },
       },
       fontFamily: {
-        title: ["Clash Grotesk", "system-ui", "sans-serif"],
+        title: ["Alexandria", "system-ui", "sans-serif"],
         body: ["Outfit", "system-ui", "sans-serif"],
       },
     },

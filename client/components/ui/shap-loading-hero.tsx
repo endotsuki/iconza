@@ -77,7 +77,7 @@ export function HeroBackground({ className }: HeroBackgroundProps) {
     <div
       className={cn(
         "absolute inset-0 overflow-hidden z-[-1]",
-        "bg-background bg-[#030303]",
+        "bg-[#030303]",
         className
       )}
     >

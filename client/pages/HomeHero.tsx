@@ -226,7 +226,11 @@ export function HomeHero() {
         {/* Features Section */}
         <section className="py-24 bg-gray-950/50">
           <div className="max-w-7xl mx-auto px-4 text-center mb-16">
-            <h2 className="text-3xl sm:text-6xl font-medium text-white">
+            <div className="inline-flex items-center gap-2 bg-lime-500/10 text-lime-400 border border-lime-500/20 px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
+              <div className="h-1.5 w-1.5 rounded-full bg-lime-500"></div>
+              Overview
+            </div>
+            <h2 className="text-3xl sm:text-6xl font-medium text-white uppercase">
               Why Choose iconza?
             </h2>
             <p className="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
@@ -287,7 +291,11 @@ export function HomeHero() {
             transition={{ duration: 0.5 }}
             className="max-w-7xl mx-auto px-4 text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-6xl font-medium text-white">
+            <div className="inline-flex items-center gap-2 bg-lime-500/10 text-lime-400 border border-lime-500/20 px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
+              <div className="h-1.5 w-1.5 rounded-full bg-lime-500"></div>
+              Quick Start
+            </div>
+            <h2 className="text-3xl sm:text-6xl font-medium text-white uppercase">
               Get Started in Minutes
             </h2>
             <p className="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">

@@ -86,7 +86,7 @@ export function IconExplorer() {
       <main className="pt-24">
         <div className="mx-auto max-w-7xl px-4 py-12">
           <div className="mt-12 bg-gray-900/50 rounded-2xl p-8 border border-gray-700 backdrop-blur-sm shadow-lg">
-            <h2 className="text-3xl sm:text-6xl font-medium text-center text-white mb-10">Quick Start</h2>
+            <h2 className="text-3xl sm:text-6xl font-medium text-center text-white mb-10 uppercase">Quick Start</h2>
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <ul className="space-y-2 text-smtext-gray-400">
                 {featureList.map((feature) => (
@@ -115,7 +115,11 @@ import { Icon } from 'iconza'
         {/* Icon Explorer */}
         <section className="mx-auto max-w-7xl px-4 py-12">
           <div className="text-center mb-28">
-            <h2 className="text-3xl sm:text-6xl font-medium text-white">
+            <div className="inline-flex items-center gap-2 bg-lime-500/10 text-lime-400 border border-lime-500/20 px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
+              <div className="h-1.5 w-1.5 rounded-full bg-lime-500"></div>
+              Icon Explorer
+            </div>
+            <h2 className="text-3xl sm:text-6xl font-medium text-white uppercase">
               Browse Icons
             </h2>
             <p className="text-lg text-gray-300">Use filters to find exactly what you need.</p>

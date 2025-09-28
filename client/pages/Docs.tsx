@@ -41,10 +41,10 @@ export default function Docs() {
               Developer Documentation
             </div>
             <div className="text-center mb-28">
-              <h2 className="text-3xl sm:text-6xl font-mediumtext-white">
-                Documentation
+              <h2 className="text-3xl sm:text-6xl font-medium text-white uppercase">
+                Documentation & Guides
               </h2>
-              <p className="text-lgtext-gray-300 max-w-2xl mx-auto leading-relaxed px-2">
+              <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed px-2">
                 Master the clean SVG icon system for React + TypeScript with
                 comprehensive guides and examples
               </p>
