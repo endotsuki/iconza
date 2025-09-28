@@ -12,9 +12,9 @@ export const FloatingSocialButtons = () => {
       label: "GitHub",
     },
     {
-      href: "https://discord.gg/onimuxha_01",
-      iconName: "Discord" as const,
-      label: "Discord",
+      href: "https://www.npmjs.com/package/iconza",
+      iconName: "NPM" as const,
+      label: "NPM",
     },
     {
       href: "https://reddit.com/user/5ukuna_ryomen/",

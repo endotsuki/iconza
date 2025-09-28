@@ -218,7 +218,7 @@ const transformToTimelineEntries = (versions: VersionEntry[]) => {
                     >
                       <Icon
                         name={iconName}
-                        className="w-6 h-6 text-neutral-200 group-hover:text-white transition-colors"
+                        size={24}
                       />
                     </div>
                   ))}

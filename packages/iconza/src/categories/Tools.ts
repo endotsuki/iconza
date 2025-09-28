@@ -431,7 +431,7 @@ export const iconsData: IconData[] = [
 `.trim(),
   },
   {
-    name: "Android Studio",
+    name: "AndroidStudio",
     category: "Tools",
     keywords: ["android", "studio", "Tools", "development", "ide"],
     svgContent: `
