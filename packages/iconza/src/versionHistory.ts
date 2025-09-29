@@ -40,6 +40,54 @@ const checkForDuplicateIcons = (history: VersionEntry[]) => {
 
 export const versionHistory: VersionEntry[] = [
   {
+    date: "2025-09-29",
+    version: "1.0.33",
+    changes: [
+      {
+        type: "added",
+        category: "AI",
+        description: "Added new AI tool icons",
+        icons: ["AnthropicLight"],
+      },
+      {
+        type: "added",
+        category: "Programming",
+        description: "Added new programming language icons",
+        icons: ["ReactQuery", "Terraform"],
+      },
+      {
+        type: "added",
+        category: "Tools",
+        description: "Added new tool icons",
+        icons: ["Ngrok", "CodeSandboxLight", "BoltLight", "Builder"],
+      },
+      {
+        type: "added",
+        category: "DesignTools",
+        description: "Added new design tool icons",
+        icons: ["AffinityDesigner", "Layers", "Designali"],
+      },
+      {
+        type: "added",
+        category: "Frameworks",
+        description: "Added new framework icons",
+        icons: ["Remotion", "Hono", "RemixLight", "Ark"],
+      },
+      {
+        type: "added",
+        category: "Other",
+        description: "Added new other icons",
+        icons: ["Binance", "Ton", "Bitcoin"],
+      },
+      {
+        type: "added",
+        category: "Apps",
+        description: "Added new app icons",
+        icons: ["Platzi", "Lemon8", "Bluesky", "Medium"],
+      },
+    ],
+  },
+  {
     date: "2025-09-28",
     version: "1.0.32",
     changes: [

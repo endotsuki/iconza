@@ -88,7 +88,7 @@ export function IconItem({ name, Comp, size, viewMode, category, keywords, sourc
           <div className="flex items-center gap-2">
             <button
               onClick={handleCopy}
-              className="p-2 rounded-lg hover:bg-gray-700/50 transition-colors"
+              className="p-2 rounded-lg hover:bg-gray-700/50 cursor-copy transition-colors"
               title="Copy icon name"
             >
               {copied ? (
@@ -139,7 +139,7 @@ export function IconItem({ name, Comp, size, viewMode, category, keywords, sourc
           <div className="flex items-center gap-2">
             <button
               onClick={handleCopy}
-              className="p-2 rounded-lg hover:bg-gray-700/50 transition-colors"
+              className="p-2 rounded-lg hover:bg-gray-700/50 cursor-copy transition-colors"
               title="Copy icon name"
             >
               {copied ? (

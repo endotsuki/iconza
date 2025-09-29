@@ -502,6 +502,21 @@ export const iconsData: IconData[] = [
     `.trim(),
   },
   {
+    name: "AffinityDesigner",
+    category: "DesignTools",
+    sourceUrl: "https://affinity.serif.com/en-us/designer/",
+    keywords: ["affinity", "design", "graphic", "tools", "creator", "ux", "ui"],
+    svgContent: `
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <path fill="#134881"
+        d="M1024 100c0-55.192-44.808-100-100-100H100C44.808 0 0 44.808 0 100v824c0 55.192 44.808 100 100 100h824c55.192 0 100-44.808 100-100V100Z" />
+    <path fill="#38bdfa"
+        d="M2477 909.311c-.17 21.934-18.03 39.689-40 39.689h-403.69l-172.55-298.876H2477v259.187ZM1603 909V733.513L1983.19 75h148.58l-321.19 556.33L1993.98 949H1643c-22.08 0-40-17.923-40-40Zm487.17-292.956h-150.22c-16.77 0-32.27-8.8-40.65-23.327-8.38-14.502-8.38-32.433 0-46.935l75.15-130.17 115.72 200.432ZM2437 75c21.97 0 39.83 17.755 40 39.689v501.355h-347.48l-135.41-234.495L2171.1 75H2437Z"
+        transform="translate(-1528)" />
+</svg>
+    `.trim(),
+  },
+  {
     name: "Sketch",
     category: "DesignTools",
     sourceUrl: "https://www.sketch.com/",
@@ -607,6 +622,35 @@ export const iconsData: IconData[] = [
 		fill="#B2215A">
 
 	</path>
+</svg>
+    `.trim(),
+  },
+  {
+    name: "Designali",
+    category: "DesignTools",
+    sourceUrl: "https://dalim.in/",
+    keywords: ["designali", "design", "tools", "creator", "ux", "ui"],
+    svgContent: `
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1440">
+    <path
+        d="M410.16 364.04h253.69c116.97 0 207.22 30.93 270.73 92.75 63.5 61.84 95.26 149.91 95.26 264.21s-31.08 201.22-93.25 262.71c-62.17 61.51-151.08 92.25-266.72 92.25h-259.7V364.04Z"
+        style="fill:#d93739" />
+</svg>
+    `.trim(),
+  },
+  {
+    name: "Layers",
+    category: "DesignTools",
+    sourceUrl: "https://layers.design/",
+    keywords: ["layers", "design", "prototype", "tools", "collaboration"],
+    svgContent: `
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 32 33">
+    <path fill="#111827" fill-opacity="0.2"
+        d="M0 18.83L.08 6.832C.094 4.66 1.613 2.798 3.71 2.383L15.297.086c2.784-.552 5.368 1.627 5.35 4.51l-.08 12c-.015 2.171-1.534 4.032-3.631 4.448L5.349 23.341C2.565 23.893-.019 21.714 0 18.83z" />
+    <path fill="#111827" fill-opacity="0.5"
+        d="M5.677 23.617l.08-12C5.77 9.447 7.29 7.586 9.387 7.17l11.587-2.296c2.784-.552 5.368 1.626 5.349 4.51l-.08 12c-.014 2.171-1.533 4.032-3.63 4.448l-11.587 2.297c-2.784.551-5.368-1.627-5.349-4.51z" />
+    <path fill="#111827" fill-opacity="0.8"
+        d="M11.354 28.404l.08-12c.014-2.172 1.533-4.032 3.63-4.448l11.587-2.297c2.784-.552 5.368 1.627 5.349 4.51l-.08 12c-.014 2.172-1.533 4.033-3.63 4.448l-11.587 2.297c-2.784.552-5.368-1.627-5.35-4.51z" />
 </svg>
     `.trim(),
   },
