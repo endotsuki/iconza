@@ -40,6 +40,54 @@ const checkForDuplicateIcons = (history: VersionEntry[]) => {
 
 export const versionHistory: VersionEntry[] = [
   {
+    date: "2025-09-30",
+    version: "1.0.34",
+    changes: [
+      {
+        type: "added",
+        category: "Other",
+        description: "Added new other icons",
+        icons: ["PDF", "AMDLight", "NVIDIA", "Snapdragon", "Razer", "Alibaba"],
+      },
+      {
+        type: "added",
+        category: "Apps",
+        description: "Added new app icons",
+        icons: ["Zoom", "ZoomLogo", "Weibo", "Spotify"],
+      },
+      {
+        type: "added",
+        category: "Frameworks",
+        description: "Added new framework icons",
+        icons: ["MedusaJS", "KrakenJS", "SymfonyLight", "UnJS", "Nginx", "Framework7", ".NET"],
+      },
+      {
+        type: "added",
+        category: "DesignTools",
+        description: "Added new design tool icons",
+        icons: ["Fresh", "Elementor", "LottieFiles", "Framer", "AffinityPhoto", "AffinityPublisher"],
+      },
+      {
+        type: "added",
+        category: "Tools",
+        description: "Added new tool icons",
+        icons: ["Azure", "Cloudflare", "StackBlitz", "Bitwarden", "Sourcegraph", "Locofy", "Basewell","Yarn", "Stripe", "EnvatoLogo", "Filmora", "W3Schools", "Airtable", "Moz", "Grammarly", "NordVPN", "NordPass", "NordLocker", "Wise", "MySQL"],
+      },
+      {
+        type: "added",
+        category: "Programming",
+        description: "Added new programming language icons",
+        icons: ["PowerShell", "JSON", "Perl", "ESLint"],
+      },
+      {
+        type: "added",
+        category: "AI",
+        description: "Added new AI icons",
+        icons: ["KimiLight", "PaLM2", "Cody", "RunwayLight", "xAILight", "GitHubCopilotLight"],
+      },
+    ],
+  },
+  {
     date: "2025-09-29",
     version: "1.0.33",
     changes: [
@@ -132,8 +180,8 @@ export const versionHistory: VersionEntry[] = [
           "ReactRouter",
           "Svelte",
           "Rax",
-          "NextJs",
-          "NuxtJs",
+          "NextJS",
+          "NuxtJS",
           "MagicUI",
         ],
       },
@@ -284,12 +332,12 @@ export const versionHistory: VersionEntry[] = [
         description: "New framework icons",
         icons: [
           "Django",
-          "AstroJsLight",
+          "AstroJSLight",
           "ReactBitsLight",
-          "ExpressJsLight",
+          "ExpressJSLight",
           "BulmaUI",
           "SemanticUI",
-          "ThreeJsLight"
+          "ThreeJSLight"
         ],
       },
     ],
@@ -413,7 +461,7 @@ export const versionHistory: VersionEntry[] = [
         type: "added",
         category: "Frameworks",
         description: "Added new framework icons",
-        icons: ["Bootstrap5", "AlpineJs", "ViteJs", "Qwik", "NestJs", "Laravel", "CodeIgniter", "Supabase", "MeteorJs", "MongoDB", "Materialize", "Storybook"],
+        icons: ["Bootstrap5", "AlpineJS", "ViteJS", "Qwik", "NestJS", "Laravel", "CodeIgniter", "Supabase", "MeteorJS", "MongoDB", "Materialize", "Storybook"],
       },
     ],
   },
@@ -425,7 +473,7 @@ export const versionHistory: VersionEntry[] = [
         type: "added",
         category: "Frameworks",
         description: "Added new framework icons",
-        icons: ["MaterialUI", "ElementUI", "AzureDevOps", "Flutter", "BackboneJs", "PandaCSS", "Godot", "Jquery", "HeadlessUI", "TailwindCSS", "RadixUILight"],
+        icons: ["MaterialUI", "ElementUI", "AzureDevOps", "Flutter", "BackboneJS", "PandaCSS", "Godot", "Jquery", "HeadlessUI", "TailwindCSS", "RadixUILight"],
       }
     ],
   },
@@ -440,7 +488,7 @@ export const versionHistory: VersionEntry[] = [
         icons: [
           "Angular",
           "Python",
-          "JestJs",
+          "JestJS",
           "Java",
           "C",
           "C++",
@@ -471,7 +519,7 @@ export const versionHistory: VersionEntry[] = [
         description: "Beta release with foundational icons",
         icons: [
           "React",
-          "VueJs",
+          "VueJS",
           "VSCode",
           "TypeScript",
           "JavaScript",

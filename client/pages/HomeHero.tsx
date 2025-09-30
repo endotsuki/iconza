@@ -31,7 +31,7 @@ const heroList = [
   "BehanceFill",
   "Miro",
   "C",
-  "NestJs",
+  "NestJS",
   "CodeIgniter",
   "Brainly",
   "Slack",
