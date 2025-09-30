@@ -111,7 +111,6 @@ export const FloatingSocialButtons = () => {
                   : "translate-y-4 opacity-0",
               )}
               aria-label={link.label}
-              title={link.label}
               style={{
                 transitionDelay: isOpen ? `${index * 100}ms` : "0ms",
               }}
@@ -161,7 +160,6 @@ const DesktopButton = ({ link }) => (
       "hover:after:opacity-100 hover:after:scale-90",
     )}
     aria-label={link.label}
-    title={link.label}
   >
     <div className="relative z-10 transition-transform duration-300 group-hover:scale-110 flex items-center justify-center w-full h-full">
       <Icon
