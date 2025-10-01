@@ -82,7 +82,7 @@ export const versionHistory: VersionEntry[] = [
         type: "added",
         category: "Tools",
         description: "Added new tool icons",
-        icons: ["Azure", "Cloudflare", "StackBlitz", "Bitwarden", "Sourcegraph", "Locofy", "Basewell","Yarn", "Stripe", "EnvatoLogo", "Filmora", "W3Schools", "Airtable", "Moz", "Grammarly", "NordVPN", "NordPass", "NordLocker", "Wise", "MySQL"],
+        icons: ["Azure", "Cloudflare", "StackBlitz", "Bitwarden", "Sourcegraph", "Locofy", "Basewell","Yarn", "Stripe", "Envato", "Filmora", "W3Schools", "Airtable", "Moz", "Grammarly", "NordVPN", "NordPass", "NordLocker", "Wise", "MySQL"],
       },
       {
         type: "added",
