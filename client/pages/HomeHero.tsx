@@ -29,17 +29,17 @@ import Button from "@/components/ui/go-btn.tsx";
 
 const heroList = [
   "BehanceFill",
-  "Miro",
-  "C",
+  "Dribbble",
+  "Fresh",
   "NestJS",
-  "CodeIgniter",
-  "Brainly",
+  "Envato",
+  "PNPM",
   "Slack",
   "Chrome",
   "AtlassianBitbucket",
-  "Telegram",
+  "Cody",
   "AdobeInDesign",
-  "VK",
+  "Discord",
 ] as const;
 export async function getStaticProps() {
   const res = await fetch(
