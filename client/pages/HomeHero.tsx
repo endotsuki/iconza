@@ -26,7 +26,7 @@ import {
 import { NumberTicker } from "../components/ui/number-ticker.tsx";
 import { useState, useEffect } from "react";
 import Button from "@/components/ui/go-btn.tsx";
-import LogoLoop from "@/components/ui/logoloop.tsx";
+import LogoLoop from "@/components/ui/LogoLoop.tsx";
 
 const heroList = [
   "BehanceFill",
@@ -235,7 +235,7 @@ export function HomeHero() {
                     animate={{ opacity: 1, y: 0 }}
                     viewport={{ once: false, amount: 0.3 }}
                     transition={{ duration: 0.4, delay: index * 0.05 }}
-                    className="flex items-center justify-center rounded-3xl border border-white/20 p-6 backdrop-blur-sm bg-white/5 hover:bg-white/10 transition-colors"
+                    className="flex items-center justify-center rounded-3xl border border-white/20 p-6 backdrop-blur-sm bg-white/5"
                   >
                     <Comp size={48} aria-label={name} />
                   </motion.div>

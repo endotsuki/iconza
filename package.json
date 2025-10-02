@@ -121,5 +121,5 @@
     "vite-plugin-pages-sitemap": "^1.7.1",
     "vitest": "^3.2.4"
   },
-  "packageManager": "pnpm@10.16.1"
+  "packageManager": "pnpm@10.17.1"
 }
