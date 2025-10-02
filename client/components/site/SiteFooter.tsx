@@ -96,7 +96,7 @@ export function SiteFooter() {
                 alt="IconZa footer"
                 width={1154}
                 height={1154}
-                className="sm:h-10 sm:w-10 transition-transform duration-300 transform group-hover:scale-110"
+                className="h-10 w-10 transition-transform duration-300 transform group-hover:scale-110"
               />
               <span className="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                 IconZa
