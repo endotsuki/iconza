@@ -41,6 +41,6 @@
     "packages/**/*",
     "vite.config.ts",
     "vite.config.server.ts"
-, "script/sitemap.ts"  ],
+, "script/generate-sitemap.ts"  ],
   "exclude": ["node_modules", "dist"]
 }
