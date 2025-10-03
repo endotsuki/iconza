@@ -13,6 +13,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "prebuild": "tsx scripts/generate-sitemap.ts",
     "start": "vite preview",
     "test": "vitest --run",
     "format.fix": "prettier --write .",
