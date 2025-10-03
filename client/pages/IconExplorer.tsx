@@ -132,9 +132,9 @@ import { Icon } from 'iconza'
                 onChange={(e) => setQuery(e.target.value)}
               />
               <kbd
-                className="absolute right-2 top-1/2 -translate-y-1/2 hidden sm:flex h-7 w-7 items-center justify-center rounded-full bg-lime-400/20 text-lime-100 text-base pointer-events-none select-none shadow-sm"
+                className="absolute right-3 top-1/2 -translate-y-1/2 hidden sm:flex h-8 w-8 items-center justify-center rounded-xl backdrop-blur-md bg-white/10 border border-white/20 text-lime-100 text-sm font-medium pointer-events-none select-none shadow-lg shadow-lime-400/10"
               >
-                <IconSlash size={18} />
+                <IconSlash size={16} />
               </kbd>
             </div>
           </div>

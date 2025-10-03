@@ -40,6 +40,48 @@ const checkForDuplicateIcons = (history: VersionEntry[]) => {
 
 export const versionHistory: VersionEntry[] = [
   {
+    date: "2025-10-03",
+    version: "1.0.36",
+    changes: [
+      {
+        type: "added",
+        category: "Apps",
+        description: "Add new apps icons",
+        icons: ["CyberGhostVPN", "Snapchat", "ProtonVPN", "HolaVPN", "SurfsharkVPN", "ExpressVPN","Netflix", "RedNote", "Line", "QQ"]
+      },
+      {
+        type: "added",
+        category: "Programming",
+        description: "Add new Other icons",
+        icons: ["Oracle", "KaliFill", "MacOS", "SVG", "Xiaomi"]
+      },
+      {
+        type: "added",
+        category: "DesignTools",
+        description: "Add new Tools icons",
+        icons: ["Freepik"]
+      },
+      {
+        type: "added",
+        category: "Framework",
+        description: "Add new Framework icons",
+        icons: ["ShadcnLight", "BlitzJS", "Lit", "Vuetify", "Vuex"]
+      },
+      {
+        type: "added",
+        category: "Tools",
+        description: "Add new Tools icons",
+        icons: ["VueUse"]
+      },
+      {
+        type: "added",
+        category: "Other",
+        description: "Add new Other icons",
+        icons: ["Bash", "Zig"]
+      },
+    ],
+  },
+  {
     date: "2025-10-02",
     version: "1.0.35",
     changes: [
@@ -135,7 +177,7 @@ export const versionHistory: VersionEntry[] = [
         type: "added",
         category: "DesignTools",
         description: "Added new design tool icons",
-        icons: ["AffinityDesigner", "Layers", "Designali"],
+        icons: ["AffinityDesigner", "LayersLight", "Designali"],
       },
       {
         type: "added",
@@ -308,6 +350,7 @@ export const versionHistory: VersionEntry[] = [
           "IBM",
           "Ethereum",
           "Debian",
+          "Microsoft"
         ],
       },
     ],

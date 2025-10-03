@@ -142,7 +142,7 @@ const ContactPage = () => {
                     className="p-6 bg-neutral-100/10 rounded-xl border border-gray-500/30 hover:border-neutral-700/50 transition-colors"
                   >
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-lime-500/50 rounded-2xl flex items-center justify-center text-white">
+                      <div className="w-12 h-12 bg-lime-500/10 rounded-2xl flex items-center justify-center text-lime-500">
                         <item.icon size={24} />
                       </div>
                       <div>

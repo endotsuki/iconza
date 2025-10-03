@@ -128,6 +128,7 @@ export function IconItem({ name, Comp, size, viewMode, category, keywords, sourc
           className="w-full flex flex-col items-center gap-2"
         >
           <div className="inline-flex items-center justify-center rounded-xl p-2 backdrop-blur-lg bg-white/5 border border-white/10 shadow-[inset_0_2px_6px_rgba(255,255,255,0.08)] relative z-10">
+            {/* className="border border-red-500" */}
             <Comp size={size} aria-label={name} />
           </div>
           <div className="text-center space-y-3">
