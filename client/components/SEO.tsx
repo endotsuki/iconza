@@ -14,15 +14,15 @@ interface SEOProps {
 export function SEO({
   title = 'Iconza',
   description = 'A modern, accessible icon set with original brand colors, full TypeScript support, and delightful animations.',
-  image = '/iconza.avif',
+  image = '/iconza-og.png',
   url = 'https://iconza.vercel.app',
   type = 'website',
   canonical,
   author = 'Iconza',
   children,
 }: SEOProps) {
-  const siteTitle = title.toLowerCase().includes('iconza') ? title : `${title} | iconza`;
-  const logoUrl = `https://iconza.vercel.app/iconza.avif`;
+  const siteTitle = title.toLowerCase().includes('iconza') ? title : `${title} | Iconza`;
+  const logoUrl = `https://iconza.vercel.app/iconza.png`;
 
   return (
     <Helmet>
@@ -37,14 +37,13 @@ export function SEO({
       <meta property="og:description" content={description} />
       <meta property="og:image" content={`https://iconza.vercel.app${image}`} />
       <meta property="og:url" content={url} />
-      <meta property="og:site_name" content="iconza" />
+      <meta property="og:site_name" content="Iconza" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={`https://iconza.vercel.app${image}`} />
-
 
       {/* Browser-specific metadata */}
       <meta name="theme-color" content="#94c748" />
@@ -56,22 +55,21 @@ export function SEO({
       <meta name="googlebot" content="index, follow" />
       <meta name="bingbot" content="index, follow" />
 
-      {/* Chrome, Firefox, Edge */}
+      {/* Viewport */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="icon" type="image/avif" href="/iconza.avif" media="(prefers-color-scheme: dark)" />
+
+      {/* ✅ Favicon */}
+      <link rel="icon" href="/iconza.ico" sizes="any" />
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
       {/* Microsoft Edge */}
       <meta name="msapplication-TileColor" content="#94c748" />
-      <meta name="msapplication-TileImage" content="/iconza.avif" />
-
-      {/* Safari */}
-      <link rel="apple-touch-icon" href="/iconza.avif" />
-      <meta name="apple-mobile-web-app-title" content="iconza" />
+      <meta name="msapplication-TileImage" content="/iconza.png" />
 
       {/* Chrome for Android */}
       <meta name="mobile-web-app-capable" content="yes" />
 
-      {/* ✅ Organization Structured Data for Google Rich Results */}
+      {/* ✅ Organization Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
