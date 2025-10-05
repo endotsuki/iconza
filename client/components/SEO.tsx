@@ -60,7 +60,7 @@ export function SEO({
 
       {/* ✅ Favicon */}
       <link rel="icon" href="/iconza.ico" sizes="any" />
-      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      <link rel="apple-touch-icon" href="/iconza.png" />
 
       {/* Microsoft Edge */}
       <meta name="msapplication-TileColor" content="#94c748" />
