@@ -344,10 +344,10 @@ export const versionHistory: VersionEntry[] = [
           "Brave",
           "StackOverflow",
           "Xing",
-          "Android",
+          "AndroidLight",
           "Yahoo",
           "YahooLogo",
-          "IBM",
+          "IBMLight",
           "Ethereum",
           "Debian",
           "Microsoft"
