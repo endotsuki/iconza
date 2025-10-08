@@ -159,7 +159,7 @@ export default function App() {
                 <CodeBlock
                   language="jsx"
                   filename="Example.tsx"
-                  code={`<Icon name="GitHubDark" size={32} className="dark:invert" />`}
+                  code={`<Icon name="GitHub Dark" size={32} className="dark:invert" />`}
                 />
                 <p className="text-xs sm:text-sm text-gray-400 mt-3">
                   Use{" "}
