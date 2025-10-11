@@ -406,9 +406,9 @@ export const iconsData: IconData[] = [
 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 512 512">
     <path
         d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0zm0 3.627c-4.593 0-8.373 3.78-8.373 8.373s3.78 8.373 8.373 8.373 8.373-3.78 8.373-8.373S16.593 3.627 12 3.627z"
-        fill="url(#meta__a)" transform="scale(21.33334)" />
+        fill="url(#meta-ai__a)" transform="scale(21.33334)" />
     <defs>
-        <linearGradient id="meta__a" x1="0" y1="0" x2="1" y2="0"
+        <linearGradient id="meta-ai__a" x1="0" y1="0" x2="1" y2="0"
             gradientUnits="userSpaceOnUse" gradientTransform="matrix(-24 24 -24 -24 24 0)">
             <stop offset="0" stop-color="#ff97e3" />
             <stop offset=".13" stop-color="#ff97e3" />

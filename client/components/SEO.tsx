@@ -11,18 +11,28 @@ interface SEOProps {
   children?: React.ReactNode;
 }
 
+// Get site URL from environment or current location
+const getSiteUrl = (): string => {
+  if (typeof window !== 'undefined') {
+    return window.location.origin;
+  }
+  return process.env.VITE_SITE_URL || 'https://iconza.vercel.app';
+};
+
 export function SEO({
   title = 'Iconza',
   description = 'A modern, accessible icon set with original brand colors, full TypeScript support, and delightful animations.',
   image = '/iconza-og.png',
-  url = 'https://iconza.vercel.app',
+  url,
   type = 'website',
   canonical,
   author = 'Iconza',
   children,
 }: SEOProps) {
+  const siteUrl = url || getSiteUrl();
   const siteTitle = title.toLowerCase().includes('iconza') ? title : `${title} | Iconza`;
-  const logoUrl = `https://iconza.vercel.app/iconza.png`;
+  const logoUrl = `${siteUrl}/iconza.png`;
+  const ogImageUrl = `${siteUrl}${image}`;
 
   return (
     <Helmet>
@@ -33,17 +43,17 @@ export function SEO({
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
-      <meta property="og:title" content={title} />
+      <meta property="og:title" content={siteTitle} /> 
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={`https://iconza.vercel.app${image}`} />
-      <meta property="og:url" content={url} />
+      <meta property="og:image" content={ogImageUrl} />
+      <meta property="og:url" content={siteUrl} />
       <meta property="og:site_name" content="Iconza" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={`https://iconza.vercel.app${image}`} />
+      <meta name="twitter:image" content={ogImageUrl} />
 
       {/* Browser-specific metadata */}
       <meta name="theme-color" content="#94c748" />
@@ -75,8 +85,9 @@ export function SEO({
           "@context": "https://schema.org",
           "@type": "Organization",
           name: "Iconza",
-          url: "https://iconza.vercel.app",
+          url: siteUrl,
           logo: logoUrl,
+          description: description,
         })}
       </script>
 
