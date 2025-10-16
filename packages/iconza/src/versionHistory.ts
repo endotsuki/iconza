@@ -40,6 +40,42 @@ const checkForDuplicateIcons = (history: VersionEntry[]) => {
 
 export const versionHistory: VersionEntry[] = [
   {
+    date: "2025-10-16",
+    version: "1.0.38",
+    changes: [
+      {
+        type: "added",
+        category: "AI",
+        description: "Add new AI icons",
+        icons: ["TensorFlow", "Trello"]
+      },
+      {
+        type: "added",
+        category: "Other",
+        description: "Add new Other icons",
+        icons: ["HackerOne Light", "SuperUser", "UML"]
+      },
+      {
+        type: "added",
+        category: "Tools",
+        description: "Add new Tools icons",
+        icons: ["Prisma Light", "Codecov"]
+      },
+      {
+        type: "added",
+        category: "Frameworks",
+        description: "Add new Frameworks icons",
+        icons: ["Gradle", "TYPO3"]
+      },
+      {
+        type: "added",
+        category: "Programming",
+        description: "Add new Programming icons",
+        icons: ["TheAlgorithms", "Axios"]
+      },
+    ],
+  },
+  {
     date: "2025-10-07",
     version: "1.0.37",
     changes: [
@@ -64,7 +100,7 @@ export const versionHistory: VersionEntry[] = [
         type: "added",
         category: "Tools",
         description: "Add new Tools icons",
-        icons: ["GoDaddy", "FirebaseStudio", "CodePen Light", "Warp"]
+        icons: ["GoDaddy", "Firebase", "FirebaseStudio", "FirebaseSDK", "CodePen Light", "Warp"]
       },
       {
         type: "added",
