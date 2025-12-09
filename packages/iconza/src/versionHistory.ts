@@ -40,6 +40,24 @@ const checkForDuplicateIcons = (history: VersionEntry[]) => {
 
 export const versionHistory: VersionEntry[] = [
   {
+    date: "2025-12-10",
+    version: "1.0.39",
+    changes: [
+      {
+        type: "added",
+        category: "Tools",
+        description: "Add new Tools icons",
+        icons: ["MicrosoftPowerPoint", "MicrosoftExcel", "MicrosoftOneNote", "MicrosoftOneDrive"]
+      },
+      {
+        type: "added",
+        category: "Programming",
+        description: "Add new Programming icons",
+        icons: ["Ruby", "Elixir"]
+      },
+    ],
+  },
+  {
     date: "2025-10-16",
     version: "1.0.38",
     changes: [

@@ -947,4 +947,78 @@ export const iconsData: IconData[] = [
 </svg>
   `.trim(),
   },
+  {
+    name: "Ruby",
+    category: "Programming",
+    sourceUrl: "https://www.ruby-lang.org/",
+    keywords: ["ruby", "programming", "language"],
+    svgContent: `
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 128 128"><linearGradient id="ruby-original-a" gradientUnits="userSpaceOnUse" x1="157.08" y1="2382.05" x2="131.682" y2="2426.892" gradientTransform="matrix(1 0 0 -1 -47.5 2517)"><stop offset="0" stop-color="#FB7655"/><stop offset="0" stop-color="#FB7655"/><stop offset=".41" stop-color="#E42B1E"/><stop offset=".99" stop-color="#900"/><stop offset="1" stop-color="#900"/></linearGradient><path fill="url(#ruby-original-a)" d="M97.078 83.214L28.34 124.031l89.003-6.04 6.855-89.745z"/><linearGradient id="ruby-original-b" gradientUnits="userSpaceOnUse" x1="169.731" y1="2419.72" x2="136.998" y2="2441.685" gradientTransform="matrix(1 0 0 -1 -47.5 2517)"><stop offset="0" stop-color="#871101"/><stop offset="0" stop-color="#871101"/><stop offset=".99" stop-color="#911209"/><stop offset="1" stop-color="#911209"/></linearGradient><path fill="url(#ruby-original-b)" d="M117.488 117.93l-7.649-52.799-20.837 27.514z"/><linearGradient id="ruby-original-c" gradientUnits="userSpaceOnUse" x1="143.542" y1="2380.69" x2="110.81" y2="2402.655" gradientTransform="matrix(1 0 0 -1 -47.5 2517)"><stop offset="0" stop-color="#871101"/><stop offset="0" stop-color="#871101"/><stop offset=".99" stop-color="#911209"/><stop offset="1" stop-color="#911209"/></linearGradient><path fill="url(#ruby-original-c)" d="M117.592 117.93l-56.044-4.399-32.91 10.385z"/><linearGradient id="ruby-original-d" gradientUnits="userSpaceOnUse" x1="74.817" y1="2435.622" x2="79.891" y2="2402.644" gradientTransform="matrix(1 0 0 -1 -47.5 2517)"><stop offset="0" stop-color="#fff"/><stop offset="0" stop-color="#fff"/><stop offset=".23" stop-color="#E57252"/><stop offset=".46" stop-color="#DE3B20"/><stop offset=".99" stop-color="#A60003"/><stop offset="1" stop-color="#A60003"/></linearGradient><path fill="url(#ruby-original-d)" d="M28.717 123.928l14.001-45.867-30.81 6.588z"/><linearGradient id="ruby-original-e" gradientUnits="userSpaceOnUse" x1="109.719" y1="2466.413" x2="111.589" y2="2432.757" gradientTransform="matrix(1 0 0 -1 -47.5 2517)"><stop offset="0" stop-color="#fff"/><stop offset="0" stop-color="#fff"/><stop offset=".23" stop-color="#E4714E"/><stop offset=".56" stop-color="#BE1A0D"/><stop offset=".99" stop-color="#A80D00"/><stop offset="1" stop-color="#A80D00"/></linearGradient><path fill="url(#ruby-original-e)" d="M88.996 92.797l-12.882-50.46-36.866 34.558z"/><linearGradient id="ruby-original-f" gradientUnits="userSpaceOnUse" x1="140.691" y1="2497.523" x2="146.289" y2="2473.401" gradientTransform="matrix(1 0 0 -1 -47.5 2517)"><stop offset="0" stop-color="#fff"/><stop offset="0" stop-color="#fff"/><stop offset=".18" stop-color="#E46342"/><stop offset=".4" stop-color="#C82410"/><stop offset=".99" stop-color="#A80D00"/><stop offset="1" stop-color="#A80D00"/></linearGradient><path fill="url(#ruby-original-f)" d="M121.275 43.047L86.426 14.585l-9.704 31.373z"/><linearGradient id="ruby-original-g" gradientUnits="userSpaceOnUse" x1="123.6" y1="2506.018" x2="147.719" y2="2518.077" gradientTransform="matrix(1 0 0 -1 -47.5 2517)"><stop offset="0" stop-color="#fff"/><stop offset="0" stop-color="#fff"/><stop offset=".54" stop-color="#C81F11"/><stop offset=".99" stop-color="#BF0905"/><stop offset="1" stop-color="#BF0905"/></linearGradient><path fill="url(#ruby-original-g)" d="M104.978 4.437L84.481 15.764 71.551 4.285z"/><linearGradient id="ruby-original-h" gradientUnits="userSpaceOnUse" x1="53.674" y1="2444.028" x2="55.66" y2="2424.153" gradientTransform="matrix(1 0 0 -1 -47.5 2517)"><stop offset="0" stop-color="#fff"/><stop offset="0" stop-color="#fff"/><stop offset=".31" stop-color="#DE4024"/><stop offset=".99" stop-color="#BF190B"/><stop offset="1" stop-color="#BF190B"/></linearGradient><path fill="url(#ruby-original-h)" d="M3.802 100.034l8.586-15.659L5.442 65.72z"/><path fill="#fff" d="M4.981 65.131l6.987 19.821 30.365-6.812L77 45.922l9.783-31.075L71.38 3.969l-26.19 9.802c-8.252 7.675-24.263 22.86-24.84 23.146-.573.291-10.575 19.195-15.369 28.214z"/><linearGradient id="ruby-original-i" gradientUnits="userSpaceOnUse" x1="40.026" y1="2418.781" x2="133.345" y2="2514.739" gradientTransform="matrix(1 0 0 -1 -47.5 2517)"><stop offset="0" stop-color="#BD0012"/><stop offset="0" stop-color="#BD0012"/><stop offset=".07" stop-color="#fff"/><stop offset=".17" stop-color="#fff"/><stop offset=".27" stop-color="#C82F1C"/><stop offset=".33" stop-color="#820C01"/><stop offset=".46" stop-color="#A31601"/><stop offset=".72" stop-color="#B31301"/><stop offset=".99" stop-color="#E82609"/><stop offset="1" stop-color="#E82609"/></linearGradient><path fill="url(#ruby-original-i)" d="M29.519 29.521c17.882-17.73 40.937-28.207 49.785-19.28 8.843 8.926-.534 30.62-18.418 48.345-17.884 17.725-40.653 28.779-49.493 19.852-8.849-8.92.242-31.191 18.126-48.917z"/><linearGradient id="ruby-original-j" gradientUnits="userSpaceOnUse" x1="111.507" y1="2409.102" x2="83.398" y2="2416.039" gradientTransform="matrix(1 0 0 -1 -47.5 2517)"><stop offset="0" stop-color="#8C0C01"/><stop offset="0" stop-color="#8C0C01"/><stop offset=".54" stop-color="#990C00"/><stop offset=".99" stop-color="#A80D0E"/><stop offset="1" stop-color="#A80D0E"/></linearGradient><path fill="url(#ruby-original-j)" d="M28.717 123.909l13.89-46.012 46.135 14.82c-16.68 15.642-35.233 28.865-60.025 31.192z"/><linearGradient id="ruby-original-k" gradientUnits="userSpaceOnUse" x1="159.785" y1="2442.837" x2="134.814" y2="2465.217" gradientTransform="matrix(1 0 0 -1 -47.5 2517)"><stop offset="0" stop-color="#7E110B"/><stop offset="0" stop-color="#7E110B"/><stop offset=".99" stop-color="#9E0C00"/><stop offset="1" stop-color="#9E0C00"/></linearGradient><path fill="url(#ruby-original-k)" d="M77.062 45.831l11.844 46.911c13.934-14.65 26.439-30.401 32.563-49.883l-44.407 2.972z"/><linearGradient id="ruby-original-l" gradientUnits="userSpaceOnUse" x1="168.959" y1="2483.901" x2="156.521" y2="2497.199" gradientTransform="matrix(1 0 0 -1 -47.5 2517)"><stop offset="0" stop-color="#79130D"/><stop offset="0" stop-color="#79130D"/><stop offset=".99" stop-color="#9E120B"/><stop offset="1" stop-color="#9E120B"/></linearGradient><path fill="url(#ruby-original-l)" d="M121.348 43.097c4.74-14.305 5.833-34.825-16.517-38.635l-18.339 10.13 34.856 28.505z"/><path fill="#9E1209" d="M3.802 99.828c.656 23.608 17.689 23.959 24.945 24.167l-16.759-39.14-8.186 14.973z"/><radialGradient id="ruby-original-m" cx="138.703" cy="2464.789" r="30.601" gradientTransform="matrix(1 0 0 -1 -47.5 2517)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#A80D00"/><stop offset="0" stop-color="#A80D00"/><stop offset=".99" stop-color="#7E0E08"/><stop offset="1" stop-color="#7E0E08"/></radialGradient><path fill="url(#ruby-original-m)" d="M77.128 45.904c10.708 6.581 32.286 19.798 32.723 20.041.68.383 9.304-14.542 11.261-22.976l-43.984 2.935z"/><radialGradient id="ruby-original-n" cx="96.325" cy="2424.465" r="40.679" gradientTransform="matrix(1 0 0 -1 -47.5 2517)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#A30C00"/><stop offset="0" stop-color="#A30C00"/><stop offset=".99" stop-color="#800E08"/><stop offset="1" stop-color="#800E08"/></radialGradient><path fill="url(#ruby-original-n)" d="M42.589 77.897l18.57 35.828c10.98-5.955 19.579-13.211 27.454-20.983L42.589 77.897z"/><linearGradient id="ruby-original-o" gradientUnits="userSpaceOnUse" x1="67.509" y1="2393.115" x2="57.373" y2="2427.506" gradientTransform="matrix(1 0 0 -1 -47.5 2517)"><stop offset="0" stop-color="#8B2114"/><stop offset="0" stop-color="#8B2114"/><stop offset=".43" stop-color="#9E100A"/><stop offset=".99" stop-color="#B3100C"/><stop offset="1" stop-color="#B3100C"/></linearGradient><path fill="url(#ruby-original-o)" d="M11.914 84.904l-2.631 31.331c4.964 6.781 11.794 7.371 18.96 6.842-5.184-12.9-15.538-38.696-16.329-38.173z"/><linearGradient id="ruby-original-p" gradientUnits="userSpaceOnUse" x1="145.272" y1="2507.076" x2="167.996" y2="2497.045" gradientTransform="matrix(1 0 0 -1 -47.5 2517)"><stop offset="0" stop-color="#B31000"/><stop offset="0" stop-color="#B31000"/><stop offset=".44" stop-color="#910F08"/><stop offset=".99" stop-color="#791C12"/><stop offset="1" stop-color="#791C12"/></linearGradient><path fill="url(#ruby-original-p)" d="M86.384 14.67l36.891 5.177c-1.969-8.343-8.015-13.727-18.32-15.41L86.384 14.67z"/></svg>
+  `.trim(),
+  },
+  {
+    name: "Elixir",
+    category: "Programming",
+    sourceUrl: "https://elixir-lang.org/",
+    keywords: ["elixir", "programming", "language"],
+    svgContent: `
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 128 128">
+    <linearGradient id="elixir-original-a" gradientUnits="userSpaceOnUse" x1="835.592" y1="-36.546"
+        x2="821.211" y2="553.414" gradientTransform="matrix(.1297 0 0 .2 -46.03 17.198)">
+        <stop offset="0" stop-color="#d9d8dc" />
+        <stop offset="1" stop-color="#fff" stop-opacity=".385" />
+    </linearGradient>
+    <path fill-rule="evenodd" clip-rule="evenodd" fill="url(#elixir-original-a)"
+        d="M64.4.5C36.7 13.9 1.9 83.4 30.9 113.9c26.8 33.5 85.4 1.3 68.4-40.5-21.5-36-35-37.9-34.9-72.9z" />
+    <linearGradient id="elixir-original-b" gradientUnits="userSpaceOnUse" x1="942.357" y1="-40.593"
+        x2="824.692" y2="472.243" gradientTransform="matrix(.1142 0 0 .2271 -47.053 17.229)">
+        <stop offset="0" stop-color="#8d67af" stop-opacity=".672" />
+        <stop offset="1" stop-color="#9f8daf" />
+    </linearGradient>
+    <path fill-rule="evenodd" clip-rule="evenodd" fill="url(#elixir-original-b)"
+        d="M64.4.2C36.8 13.6 1.9 82.9 31 113.5c10.7 12.4 28 16.5 37.7 9.1 26.4-18.8 7.4-53.1 10.4-78.5C68.1 33.9 64.2 11.3 64.4.2z" />
+    <linearGradient id="elixir-original-c" gradientUnits="userSpaceOnUse" x1="924.646" y1="120.513"
+        x2="924.646" y2="505.851" gradientTransform="matrix(.1227 0 0 .2115 -46.493 17.206)">
+        <stop offset="0" stop-color="#26053d" stop-opacity=".762" />
+        <stop offset="1" stop-color="#b7b4b4" stop-opacity=".278" />
+    </linearGradient>
+    <path fill-rule="evenodd" clip-rule="evenodd" fill="url(#elixir-original-c)"
+        d="M56.7 4.3c-22.3 15.9-28.2 75-24.1 94.2 8.2 48.1 75.2 28.3 69.6-16.5-6-29.2-48.8-39.2-45.5-77.7z" />
+    <linearGradient id="elixir-original-d" gradientUnits="userSpaceOnUse" x1="428.034" y1="198.448"
+        x2="607.325" y2="559.255" gradientTransform="matrix(.1848 0 0 .1404 -42.394 17.138)">
+        <stop offset="0" stop-color="#91739f" stop-opacity=".46" />
+        <stop offset="1" stop-color="#32054f" stop-opacity=".54" />
+    </linearGradient>
+    <path fill-rule="evenodd" clip-rule="evenodd" fill="url(#elixir-original-d)"
+        d="M78.8 49.8c10.4 13.4 12.7 22.6 6.8 27.9-27.7 19.4-61.3 7.4-54-37.3C22.1 63 4.5 96.8 43.3 101.6c20.8 3.6 54 2 58.9-16.1-.2-15.9-10.8-22.9-23.4-35.7z" />
+    <linearGradient id="elixir-original-e" gradientUnits="userSpaceOnUse" x1="907.895" y1="540.636"
+        x2="590.242" y2="201.281" gradientTransform="matrix(.1418 0 0 .1829 -45.23 17.18)">
+        <stop offset="0" stop-color="#463d49" stop-opacity=".331" />
+        <stop offset="1" stop-color="#340a50" stop-opacity=".821" />
+    </linearGradient>
+    <path fill-rule="evenodd" clip-rule="evenodd" fill="url(#elixir-original-e)"
+        d="M38.1 36.4c-2.9 21.2 35.1 77.9 58.3 71-17.7 35.6-56.9-21.2-64-41.7 1.5-11 2.2-16.4 5.7-29.3z" />
+    <linearGradient id="elixir-original-f" gradientUnits="userSpaceOnUse" x1="1102.297" y1="100.542"
+        x2="1008.071" y2="431.648" gradientTransform="matrix(.106 0 0 .2448 -47.595 17.242)">
+        <stop offset="0" stop-color="#715383" stop-opacity=".145" />
+        <stop offset="1" stop-color="#f4f4f4" stop-opacity=".234" />
+    </linearGradient>
+    <path fill-rule="evenodd" clip-rule="evenodd" fill="url(#elixir-original-f)"
+        d="M60.4 49.7c.8 7.9 3.9 20.5 0 28.8S38.7 102 43.6 115.3c11.4 24.8 37.1-4.4 36.9-19 1.1-11.8-6.6-38.7-1.8-52.5L76.5 41l-13.6-4c-2.2 3.2-3 7.5-2.5 12.7z" />
+    <linearGradient id="elixir-original-g" gradientUnits="userSpaceOnUse" x1="1354.664" y1="140.06"
+        x2="1059.233" y2="84.466" gradientTransform="matrix(.09173 0 0 .2828 -48.536 17.28)">
+        <stop offset="0" stop-color="#a5a1a8" stop-opacity=".356" />
+        <stop offset="1" stop-color="#370c50" stop-opacity=".582" />
+    </linearGradient>
+    <path fill-rule="evenodd" clip-rule="evenodd" fill="url(#elixir-original-g)"
+        d="M65.3 10.8C36 27.4 48 53.4 49.3 81.6l19.1-55.4c-1.4-5.7-2.3-9.5-3.1-15.4z" />
+    <path fill-rule="evenodd" clip-rule="evenodd" fill="#330A4C" fill-opacity=".316"
+        d="M68.3 26.1c-14.8 11.7-14.1 31.3-18.6 54 8.1-21.3 4.1-38.2 18.6-54z" />
+    <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFF"
+        d="M45.8 119.7c8 1.1 12.1 2.2 12.5 3 .3 4.2-11.1 1.2-12.5-3z" />
+    <path fill-rule="evenodd" clip-rule="evenodd" fill="#EDEDED" fill-opacity=".603"
+        d="M49.8 10.8c-6.9 7.7-14.4 21.8-18.2 29.7-1 6.5-.5 15.7.6 23.5.9-18.2 7.5-39.2 17.6-53.2z" />
+</svg>
+  `.trim(),
+  },
 ];

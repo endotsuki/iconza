@@ -1374,7 +1374,7 @@ export const iconsData: IconData[] = [
     sourceUrl: "https://ui.shadcn.com/",
     keywords: ["shadcn","ui", "ux", "framework", "web", "development"],
     svgContent: `
-<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 256 256">
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 250 250">
     <path
         d="M230.725 3.92155C235.953 9.1503 235.953 17.6278 230.725 22.8565L22.7799 230.801C17.5511 236.03 9.07364 236.03 3.8449 230.801C-1.38385 225.573 -1.38385 217.095 3.8449 211.866L211.79 3.92156C217.019 -1.30718 225.496 -1.30719 230.725 3.92155Z"
         fill="#000000" />
