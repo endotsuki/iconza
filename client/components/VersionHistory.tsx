@@ -48,8 +48,8 @@ const useEscapeKey = (onClose: () => void) => {
 
 const getTypeIcon = (type: string) => {
   switch (type) {
-    case 'added': return <IconCodePlus size={20} className="text-lime-500" />;
-    case 'updated': return <IconRefresh size={20} className="text-blue-500" />;
+    case 'added': return <IconCodePlus size={20} className="text-asset" />;
+    case 'updated': return <IconRefresh size={20} className="text-secondary" />;
     case 'fixed': return <IconBug size={20} className="text-amber-500" />;
     default: return <IconCodePlus size={20} className="text-gray-500" />;
   }
@@ -57,8 +57,8 @@ const getTypeIcon = (type: string) => {
 
 const getTypeColor = (type: string) => {
   switch (type) {
-    case 'added': return 'bg-lime-500/10 text-lime-500 border-lime-500/20';
-    case 'updated': return 'bg-blue-500/10 text-blue-500 border-blue-500/20';
+    case 'added': return 'bg-asset/10 text-asset border-asset/20';
+    case 'updated': return 'bg-secondary/10 text-secondary border-secondary/20';
     case 'fixed': return 'bg-amber-500/10 text-amber-500 border-amber-500/20';
     default: return 'bg-gray-500/10 text-gray-500 border-gray-500/20';
   }
@@ -88,7 +88,7 @@ export const VersionHistory = ({ isOpen, onClose }: VersionHistoryProps) => {
             <div className="border-b border-gray-800 py-4 px-6">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <IconTag className="h-6 w-6 text-lime-500" />
+                  <IconTag className="h-6 w-6 text-secondary" />
                   <div>
                     <span className="text-2xl font-semibold text-white">Version History</span>
                     <p className="text-gray-400">See what's new in each update</p>
@@ -118,7 +118,7 @@ export const VersionHistory = ({ isOpen, onClose }: VersionHistoryProps) => {
 const transformToTimelineEntries = (versions: VersionEntry[]) => {
   return versions.map(version => ({
     title: (
-      <span className={version.date === versionHistory[0].date ? "text-lime-500" : "text-neutral-400"}>
+      <span className={version.date === versionHistory[0].date ? "text-primary" : "text-neutral-400"}>
         {new Date(version.date).toLocaleDateString('en-US', {
           year: 'numeric',
           month: 'long',
@@ -134,7 +134,7 @@ const transformToTimelineEntries = (versions: VersionEntry[]) => {
             Version {version.version}
           </div>
           {version.date === versionHistory[0].date && (
-            <span className="px-2 py-0.5 bg-lime-500/10 text-lime-400 text-xs rounded-md border border-lime-500/20">
+            <span className="px-2 py-0.5 bg-primary/10 text-primary text-xs rounded-md border border-primary/20">
               Latest
             </span>
           )}

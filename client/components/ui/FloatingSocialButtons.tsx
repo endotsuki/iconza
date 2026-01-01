@@ -34,10 +34,10 @@ export const FloatingSocialButtons = () => {
       <aside
         className={cn(
           "fixed right-4 top-2/4 z-50 translate-y-24 hidden lg:flex",
-          "bg-black/80 backdrop-blur-xl border border-lime-500/30",
+          "bg-black/80 backdrop-blur-xl border border-primary/30",
           "rounded-2xl shadow-2xl p-3 flex-col gap-3",
           "transform transition-all duration-300 hover:scale-105",
-          "hover:border-lime-500/50 hover:shadow-lime-500/20",
+          "hover:border-primary/50 hover:shadow-primary/20",
         )}
       >
         {links.map((link) => (
@@ -50,11 +50,11 @@ export const FloatingSocialButtons = () => {
         <button
           onClick={() => setIsOpen(!isOpen)}
           className={cn(
-            "w-12 h-12 rounded-full bg-lime-500 text-black",
+            "w-12 h-12 rounded-full bg-primary text-black",
             "flex items-center justify-center shadow-2xl",
-            "border-2 border-lime-400 transition-all duration-300",
+            "border-2 border-primary transition-all duration-300",
             "hover:scale-110 active:scale-95 relative z-50",
-            "focus:outline-none focus:ring-4 focus:ring-lime-500/50",
+            "focus:outline-none focus:ring-4 focus:ring-primary/50",
           )}
           aria-label="Social links"
         >
@@ -104,7 +104,7 @@ export const FloatingSocialButtons = () => {
               className={cn(
                 "group relative flex items-center justify-center",
                 "w-12 h-12 rounded-full transition-all duration-300",
-                "bg-neutral-800 border border-lime-500/30 text-lime-500",
+                "bg-neutral-800 border border-primary/30 text-primary",
                 "hover:scale-110 hover:text-white shadow-lg",
                 isOpen
                   ? `translate-y-0 opacity-100`
@@ -149,13 +149,13 @@ const DesktopButton = ({ link }) => (
       "w-12 h-12 rounded-xl transition-all duration-300",
       "bg-neutral-800 border border-neutral-800",
       "hover:scale-110 hover:-translate-y-1",
-      "text-lime-500 hover:text-white",
+      "text-primary hover:text-white",
       link.color,
       "before:absolute before:inset-0 before:rounded-xl",
-      "before:bg-lime-500 before:opacity-0 before:transition-opacity",
+      "before:bg-primary before:opacity-0 before:transition-opacity",
       "hover:before:opacity-10",
       "after:absolute after:inset-0 after:rounded-xl",
-      "after:border after:border-lime-500 after:opacity-0",
+      "after:border after:border-primary after:opacity-0",
       "after:transition-all after:duration-300",
       "hover:after:opacity-100 hover:after:scale-90",
     )}
@@ -175,11 +175,11 @@ const DesktopButton = ({ link }) => (
         "bg-black text-white text-xs rounded-md",
         "opacity-0 group-hover:opacity-100 transition-opacity duration-200",
         "whitespace-nowrap pointer-events-none",
-        "border border-lime-500/30",
+        "border border-primary/30",
       )}
     >
       {link.label}
-      <div className="absolute top-1/2 right-0 transform translate-x-1 -translate-y-1/2 w-2 h-2 bg-black rotate-45 border-r border-b border-lime-500/30"></div>
+      <div className="absolute top-1/2 right-0 transform translate-x-1 -translate-y-1/2 w-2 h-2 bg-black rotate-45 border-r border-b border-primary/30"></div>
     </div>
   </a>
 );

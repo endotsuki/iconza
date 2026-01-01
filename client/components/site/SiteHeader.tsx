@@ -42,7 +42,7 @@ export function SiteHeader() {
                 width={1154}
                 height={1154}
                 className="h-10 w-10 transition-transform duration-300 transform group-hover:scale-110"
-              />  
+              />
               <span className="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                 IconZa
               </span>
@@ -57,17 +57,12 @@ export function SiteHeader() {
                     key={href}
                     to={href}
                     className={`flex items-center gap-2 px-5 py-2.5 rounded-full transition-all duration-300 group relative ${isActive
-                      ? "text-lime-400 bg-lime-500/10 border border-lime-500/20"
+                      ? "text-primary bg-primary/10 border border-primary/20"
                       : "text-gray-400 hover:text-white hover:bg-white/5"
                       }`}
                   >
                     <Icon size={20} className="transition-transform group-hover:scale-110" />
                     <span className="font-medium text-sm">{label}</span>
-
-                    {/* Active indicator */}
-                    {isActive && (
-                      <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-lime-400 rounded-full"></div>
-                    )}
                   </Link>
                 );
               })}
@@ -79,7 +74,7 @@ export function SiteHeader() {
                 onClick={() => setShowHistory(true)}
                 className="hidden group relative sm:inline-flex h-10 sm:h-12 overflow-hidden rounded-full p-px focus:outline-none"
               >
-                <div className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#94c748_0%,#000000_50%,#94c748_100%)]" />
+                <div className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,theme(colors.blue.500)_0%,theme(colors.black)_50%,theme(colors.blue.500)_100%)]"/>
                 <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-6 sm:px-8 text-xs sm:text-sm font-medium text-white backdrop-blur-3xl gap-2">
                   <IconHistory size={20} className="sm:h-4 sm:w-4 transform transition-transform duration-300 group-hover:translate-x-1" />
                   <span className="transform transition-transform duration-300 group-hover:translate-x-1">
@@ -90,7 +85,7 @@ export function SiteHeader() {
 
               {/* Mobile Menu Button */}
               <button
-                className="lg:hidden p-2 rounded-lg bg-gray-800/50 border border-gray-700 text-gray-400 hover:text-white hover:border-lime-500/30 transition-all duration-300"
+                className="lg:hidden p-2 rounded-lg bg-gray-800/50 border border-gray-700 text-gray-400 hover:text-white hover:border-primary/30 transition-all duration-300"
                 onClick={() => setMobileOpen(!mobileOpen)}
                 aria-label={mobileOpen ? "Close menu" : "Open menu"}
               >
@@ -122,7 +117,7 @@ export function SiteHeader() {
                         to={href}
                         onClick={() => setMobileOpen(false)}
                         className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 ${isActive
-                          ? "bg-lime-500/10 text-lime-400 border border-lime-500/20"
+                          ? "bg-primary/10 text-primary border border-primary/20"
                           : "text-gray-400 hover:text-white hover:bg-white/5"
                           }`}
                       >

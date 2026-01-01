@@ -109,7 +109,7 @@ export function IconDetailDialog(props: IconDetailProps) {
                         }}
                         onMouseEnter={() => !showTooltip && setShowTooltip(true)}
                         onMouseLeave={() => !copiedName && setShowTooltip(false)}
-                        className="text-xl font-medium hover:text-lime-500 transition-colors duration-200 cursor-pointer text-left relative"
+                        className="text-xl font-medium hover:text-primary transition-colors duration-200 cursor-pointer text-left relative"
                       >
                         {name}
 
@@ -178,7 +178,7 @@ export function IconDetailDialog(props: IconDetailProps) {
                         type="button"
                         onClick={() => setSize(48)}
                         title="Reset size"
-                        className="group p-2 rounded-lg bg-lime-500/10 backdrop-blur-md shadow-md text-white border border-lime-500/30 hover:shadow-lg transition-colors duration-300"
+                        className="group p-2 rounded-lg bg-primary/10 backdrop-blur-md shadow-md text-white border border-primary/30 hover:shadow-lg transition-colors duration-300"
                       >
                         <IconRestore
                           size={20}

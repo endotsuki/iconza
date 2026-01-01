@@ -21,7 +21,7 @@ const buttonVariants = cva(
         ghost:
           'hover:bg-accent hover:text-accent-foreground',
         glass:
-          "bg-lime-500/10 backdrop-blur-md shadow-md text-white border border-lime-500/30 hover:shadow-lg transition-colors",
+          "bg-primary/10 backdrop-blur-md shadow-md text-white border border-primary/30 hover:shadow-lg transition-colors",
       },
       size: {
         default: 'size-8 rounded-lg [&_svg]:size-4',

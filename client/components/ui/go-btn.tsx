@@ -49,7 +49,7 @@ const StyledWrapper = styled.div<{ $clr: string }>`
 
   .button:hover .button__icon-wrapper {
     color: #ffffff;
-    background-color: #84cc16;
+    background-color: #3B82F6;
   }
 
   .button__icon-svg--copy {
@@ -70,7 +70,7 @@ const StyledWrapper = styled.div<{ $clr: string }>`
 
 const Button: React.FC<ButtonProps> = ({
     text = "Explore All",
-    color = "#84cc16",
+    color = "#3B82F6",
     to = "/",
 }) => {
     const navigate = useNavigate();

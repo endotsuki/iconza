@@ -81,12 +81,12 @@ export function IconExplorer() {
       <main className="pt-24">
         <div className="mx-auto max-w-7xl px-4 py-12">
           <div className="mt-12 bg-gray-900/50 rounded-2xl p-8 border border-gray-700 backdrop-blur-sm shadow-lg">
-            <h1 className="text-3xl sm:text-6xl font-medium text-center text-lime-500 mb-10 uppercase">Quick Start: <span className="text-white">Browse and Customize Icons</span></h1>
+            <h1 className="text-3xl sm:text-6xl font-medium text-center text-primary mb-10 uppercase">Quick Start: <span className="text-white">Browse and Customize Icons</span></h1>
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <ul className="space-y-4 text-smtext-gray-400">
                 {featureList.map((feature) => (
                   <li key={feature} className="flex items-center">
-                    <IconSquareRoundedCheckFilled className="inline w-5 h-5 mr-2 text-lime-500" />
+                    <IconSquareRoundedCheckFilled className="inline w-5 h-5 mr-2 text-asset" />
                     <span className="font-medium">{feature}</span>
                   </li>
                 ))}
@@ -110,8 +110,8 @@ import { Icon } from 'iconza'
         {/* Icon Explorer */}
         <section className="mx-auto max-w-7xl px-4 py-12">
           <div className="text-center mb-28">
-            <div className="inline-flex items-center gap-2 bg-lime-500/10 text-lime-400 border border-lime-500/20 px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
-              <div className="h-1.5 w-1.5 rounded-full bg-lime-500"></div>
+            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary border border-primary/20 px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
+              <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
               Icon Explorer
             </div>
             <h2 className="text-3xl sm:text-6xl font-medium text-white uppercase">
@@ -132,7 +132,7 @@ import { Icon } from 'iconza'
                 onChange={(e) => setQuery(e.target.value)}
               />
               <kbd
-                className="absolute right-3 top-1/2 -translate-y-1/2 hidden sm:flex h-8 w-8 items-center justify-center rounded-xl backdrop-blur-md bg-white/10 border border-white/20 text-lime-100 text-sm font-medium pointer-events-none select-none shadow-lg shadow-lime-400/10"
+                className="absolute right-3 top-1/2 -translate-y-1/2 hidden sm:flex h-8 w-8 items-center justify-center rounded-xl backdrop-blur-md bg-white/10 border border-white/20 text-secondary text-sm font-medium pointer-events-none select-none shadow-lg shadow-primary/10"
               >
                 <IconSlash size={16} />
               </kbd>
@@ -148,13 +148,13 @@ import { Icon } from 'iconza'
                   className={cn(
                     "p-2 rounded-xl transition-all duration-500 relative overflow-hidden group border",
                     viewMode === mode
-                      ? "border-lime-400/50 bg-lime-400/10 text-lime-400 shadow-lg shadow-lime-400/20"
+                      ? "border-primary/50 bg-primary/10 text-primary shadow-lg shadow-primary/20"
                       : "border-transparent text-gray-400 hover:text-gray-200 hover:border-gray-600/50"
                   )}
                   title={`Switch to ${mode} view`}
                 >
                   {viewMode === mode && (
-                    <div className="absolute inset-0 bg-lime-400/10 rounded-xl animate-pulse" />
+                    <div className="absolute inset-0 bg-primary/10 rounded-xl animate-pulse" />
                   )}
                   <Icon size={20} className="relative z-10" />
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 -skew-x-12 transform" />
@@ -190,18 +190,18 @@ import { Icon } from 'iconza'
                     className={cn(
                       "flex items-center gap-2 rounded-xl px-5 py-2 cursor-pointer text-sm transition-colors",
                       tab === category
-                        ? "bg-lime-500/10 text-lime-400 border border-lime-500/20"
+                        ? "bg-primary/10 text-primary border border-primary/20"
                         : "text-zinc-200 my-1 hover:text-white hover:bg-zinc-50/10"
                     )}
                   >
                     <div className={cn(
                       "transition-colors",
-                      tab === category ? "text-lime-400" : "text-zinc-400"
+                      tab === category ? "text-primary" : "text-zinc-400"
                     )}>
                       {iconsMap[category]}
                     </div>
                     <span>{category === "DesignTools" ? "Design" : category}</span>
-                    <span className="ml-auto text-lime-500">
+                    <span className="ml-auto text-primary">
                       {category === "All"
                         ? Object.values(Categories).flat().length
                         : (Categories[category] || []).length}
@@ -214,7 +214,7 @@ import { Icon } from 'iconza'
 
           {/* Results */}
           <p className="text-sm text-gray-400 mb-4 truncate max-w-lg">
-            <span className="text-2xl font-medium tracking-tighter text-lime-500 mr-3">{filtered.length}</span>icon{filtered.length !== 1 ? "s" : ""}
+            <span className="text-2xl font-medium tracking-tighter text-primary mr-3">{filtered.length}</span>icon{filtered.length !== 1 ? "s" : ""}
             {query && ` matching "${query}"`}
             {tab !== "All" && ` in ${tab}`}
           </p>

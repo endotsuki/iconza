@@ -179,14 +179,14 @@ export function HomeHero() {
           <HeroBackground className="absolute inset-0 w-full h-full z-0 pointer-events-none" />
           <div className="relative z-10 mx-auto max-w-7xl px-4 py-12 mb-20 md:py-20 grid items-center gap-10 md:grid-cols-2">
             <div>
-              <p className="mt-2 inline-block rounded-full bg-lime-500/10 px-3 py-1 text-sm font-medium border border-lime-500/50 text-lime-400">
+              <p className="mt-2 inline-block rounded-full bg-primary/10 px-3 py-1 text-sm font-medium border border-primary/50 text-primary mb-6">
                 v{pkg.version}
               </p>
               <h1 className="text-5xl md:text-7xl font-semibold text-balance">
                 Every icon you need.
                 <FlipWords
                   words={words}
-                  className="font-normal text-lime-500"
+                  className="font-normal text-primary"
                 />
               </h1>
 
@@ -208,7 +208,7 @@ export function HomeHero() {
                 >
                   <Link to="/icons">
                     <button className="group relative inline-flex h-12 overflow-hidden rounded-full p-px">
-                      <div className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#84cc16_0%,#000000_50%,#84cc16_100%)]" />
+                      <div className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,theme(colors.blue.500)_0%,theme(colors.black)_50%,theme(colors.blue.500)_100%)]"/>
                       <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
                         <IconArrowRight
                           size={20}
@@ -220,7 +220,7 @@ export function HomeHero() {
                       </span>
                     </button>
                   </Link>
-                  <Button color="#84cc16" text="View Document" to="/docs" />
+                  <Button color="#3B82F6" text="View Document" to="/docs" />
                 </motion.div>
               </div>
             </div>
@@ -263,8 +263,8 @@ export function HomeHero() {
         {/* Features Section */}
         <section className="py-24 bg-gray-950/50">
           <div className="max-w-7xl mx-auto px-4 text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-lime-500/10 text-lime-400 border border-lime-500/20 px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
-              <div className="h-1.5 w-1.5 rounded-full bg-lime-500"></div>
+            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary border border-primary/20 px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
+              <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
               Overview
             </div>
             <h2 className="text-3xl sm:text-6xl font-medium text-white uppercase">
@@ -287,9 +287,9 @@ export function HomeHero() {
                 className="text-center p-8 rounded-2xl bg-gray-900/50 shadow-lg border border-gray-700"
               >
                 <div
-                  className={`w-12 h-12 mx-auto mb-6 rounded-2xl bg-lime-500/10 flex items-center justify-center`}
+                  className={`w-12 h-12 mx-auto mb-6 rounded-2xl bg-primary/10 flex items-center justify-center`}
                 >
-                  <Icon className={`w-6 h-6 text-lime-500`} />
+                  <Icon className={`w-6 h-6 text-primary`} />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">
                   {title}
@@ -308,7 +308,7 @@ export function HomeHero() {
                 <NumberTicker
                   value={value}
                   suffix={suffix}
-                  className="text-7xl font-medium tracking-tighter text-lime-500"
+                  className="text-7xl font-medium tracking-tighter text-primary"
                 />
                 <div className="text-sm text-gray-400">
                   {label}
@@ -328,8 +328,8 @@ export function HomeHero() {
             transition={{ duration: 0.5 }}
             className="max-w-7xl mx-auto px-4 text-center mb-16"
           >
-            <div className="inline-flex items-center gap-2 bg-lime-500/10 text-lime-400 border border-lime-500/20 px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
-              <div className="h-1.5 w-1.5 rounded-full bg-lime-500"></div>
+            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary border border-primary/20 px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
+              <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
               Quick Start
             </div>
             <h2 className="text-3xl sm:text-6xl font-medium text-white uppercase">
@@ -377,7 +377,7 @@ export function HomeHero() {
               >
                 <Link to="/icons">
                   <button className="group relative inline-flex h-12 overflow-hidden rounded-full p-px">
-                    <div className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#84cc16_0%,#000000_50%,#84cc16_100%)]" />
+                    <div className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,theme(colors.blue.500)_0%,theme(colors.black)_50%,theme(colors.blue.500)_100%)]"/>
                     <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
                       <IconArrowRight
                         size={20}
@@ -403,7 +403,7 @@ export function HomeHero() {
                 <TypingAnimation delay={0}>
                   $ npm install iconza
                 </TypingAnimation>
-                <AnimatedSpan className="text-lime-500">
+                <AnimatedSpan className="text-primary">
                   ✔ Installed successfully!
                 </AnimatedSpan>
                 <AnimatedSpan className="text-blue-500">

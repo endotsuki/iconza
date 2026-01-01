@@ -60,25 +60,25 @@ export function SiteFooter() {
         name: "GitHub",
         href: "https://github.com/Onimuxha",
         icon: IconBrandGithub,
-        color: "hover:text-lime-400",
+        color: "hover:text-primary",
       },
       {
         name: "X",
         href: "https://x.com/onimuxha",
         icon: IconBrandX,
-        color: "hover:text-lime-400",
+        color: "hover:text-primary",
       },
       {
         name: "Email",
         href: "mailto:akumayami288@gmail.com",
         icon: IconMail,
-        color: "hover:text-lime-400",
+        color: "hover:text-primary",
       },
       {
         name: "NPM",
         href: "https://www.npmjs.com/~onimuxha",
         icon: IconBrandNpm,
-        color: "hover:text-lime-400",
+        color: "hover:text-primary",
       },
     ],
   };
@@ -115,7 +115,7 @@ export function SiteFooter() {
                   key={item.name}
                   href={item.href}
                   target="_blank"
-                  className={`p-2 rounded-lg bg-gray-800/50 border border-gray-700 text-gray-400 transition-all duration-200 ${item.color} hover:border-lime-500/30 hover:scale-110`}
+                  className={`p-2 rounded-lg bg-gray-800/50 border border-gray-700 text-gray-400 transition-all duration-200 ${item.color} hover:border-primary/30 hover:scale-110`}
                   aria-label={item.name}
                 >
                   <item.icon className="h-5 w-5" />
@@ -128,8 +128,8 @@ export function SiteFooter() {
           <div>
             <span className="text-lg font-semibold text-white mb-6 flex items-center gap-2">
               <span className="relative flex size-3">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-lime-400 opacity-75"></span>
-                <span className="relative inline-flex size-3 rounded-full bg-lime-500"></span>
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
+                <span className="relative inline-flex size-3 rounded-full bg-primary"></span>
               </span>
               Navigation
             </span>
@@ -138,7 +138,7 @@ export function SiteFooter() {
                 <li key={name}>
                   <Link
                     to={href}
-                    className="flex items-center space-x-3 text-gray-400 hover:text-lime-400 transition-all duration-200 group text-sm font-medium py-2"
+                    className="flex items-center space-x-3 text-gray-400 hover:text-primary transition-all duration-200 group text-sm font-medium py-2"
                   >
                     <Icon className="h-5 w-5 transition-transform group-hover:scale-110" />
                     <span className="group-hover:translate-x-1 transition-transform">
@@ -154,8 +154,8 @@ export function SiteFooter() {
           <div>
             <span className="text-lg font-semibold text-white mb-6 flex items-center gap-2">
               <span className="relative flex size-3">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-lime-400 opacity-75"></span>
-                <span className="relative inline-flex size-3 rounded-full bg-lime-500"></span>
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
+                <span className="relative inline-flex size-3 rounded-full bg-primary"></span>
               </span>
               Statistics
             </span>
@@ -163,18 +163,18 @@ export function SiteFooter() {
               {navigation.stats.map(({ value, label, icon: Icon }) => (
                 <div
                   key={label}
-                  className="flex items-center justify-between p-3 rounded-lg bg-gray-800/30 border border-gray-700 hover:border-lime-500/30 transition-colors"
+                  className="flex items-center justify-between p-3 rounded-lg bg-gray-800/30 border border-gray-700 hover:border-primary/30 transition-colors"
                 >
                   <div className="flex items-center space-x-3">
-                    <div className="p-2 rounded-lg bg-lime-500/10">
-                      <Icon className="h-4 w-4 text-lime-400" />
+                    <div className="p-2 rounded-lg bg-primary/10">
+                      <Icon className="h-4 w-4 text-primary" />
                     </div>
                     <span className="text-gray-300 text-sm font-medium">
                       {label}
                     </span>
                   </div>
                   {value && (
-                    <span className="text-white font-bold text-sm bg-lime-500/10 px-2 py-1 rounded">
+                    <span className="text-white font-bold text-sm bg-primary/10 px-2 py-1 rounded">
                       {value.toLocaleString()}
                     </span>
                   )}
@@ -185,7 +185,7 @@ export function SiteFooter() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 h-px bg-gradient-to-r from-transparent via-lime-500/50 to-transparent"></div>
+        <div className="mt-16 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
         <div className="mt-8">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-4 lg:space-y-0">
             <div className="flex items-center space-x-4 text-gray-400 text-sm">

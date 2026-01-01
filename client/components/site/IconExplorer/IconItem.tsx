@@ -92,7 +92,7 @@ export function IconItem({ name, Comp, size, viewMode, category, keywords, sourc
               title="Copy icon name"
             >
               {copied ? (
-                <IconCheck className="w-4 h-4 text-lime-400" />
+                <IconCheck className="w-4 h-4 text-primary" />
               ) : (
                 <IconCopy className="w-4 h-4 text-gray-400 group-hover:text-white" />
               )}
@@ -144,7 +144,7 @@ export function IconItem({ name, Comp, size, viewMode, category, keywords, sourc
               title="Copy icon name"
             >
               {copied ? (
-                <IconCheck className="w-4 h-4 text-lime-400" />
+                <IconCheck className="w-4 h-4 text-primary" />
               ) : (
                 <IconCopy className="w-4 h-4 text-gray-400 group-hover:text-white" />
               )}

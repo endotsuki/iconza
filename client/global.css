@@ -33,12 +33,34 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
+
+    /* Semantic theme colors */
+    --color-primary: #3b82f6; /* Tailwind blue-500 */
+    --color-primary-foreground: #ffffff;
+
+    --color-secondary: #6366f1; /* Tailwind indigo-500 */
+    --color-secondary-foreground: #ffffff;
+
+    --color-asset: #10b981; /* Tailwind green-500 */
+    --color-asset-foreground: #ffffff;
+
     /* ... keep only the colors you actually use ... */
   }
 
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
+
+    /* Dark theme can reuse the same semantic colors or override if desired */
+    --color-primary: #3b82f6;
+    --color-primary-foreground: #ffffff;
+
+    --color-secondary: #6366f1;
+    --color-secondary-foreground: #ffffff;
+
+    --color-asset: #10b981;
+    --color-asset-foreground: #ffffff;
+
     /* ... keep only the colors you actually use ... */
   }
 
