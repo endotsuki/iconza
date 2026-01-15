@@ -1,72 +1,67 @@
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { CodeBlock } from "@/components/ui/code-block";
-import { SEO } from "@/components/SEO";
-import { icons } from "../../packages/iconza/src/index.ts";
-import pkg from "../../packages/iconza/package.json";
-import { FlipWords } from "../components/ui/flip-words.tsx";
-import { SiteHeader } from "../components/site/SiteHeader.tsx";
-import { SiteFooter } from "../components/site/SiteFooter.tsx";
-import { HeroBackground } from "../components/ui/shap-loading-hero.tsx";
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { CodeBlock } from '@/components/ui/code-block';
+import { SEO } from '@/components/SEO';
+import { icons } from '../../packages/iconza/src/index.ts';
+import pkg from '../../packages/iconza/package.json';
+import { FlipWords } from '../components/ui/flip-words.tsx';
+import { SiteHeader } from '../components/site/SiteHeader.tsx';
+import { SiteFooter } from '../components/site/SiteFooter.tsx';
+import { HeroBackground } from '../components/ui/shap-loading-hero.tsx';
 import {
-  IconArrowRight,
+  IconArrowLeft,
   IconRocket,
   IconColorFilter,
   IconTextResize,
   IconBackground,
   IconLayersIntersect,
   IconSourceCode,
-} from "@tabler/icons-react";
-import { categories } from "../components/site/IconExplorer/iconUtils.tsx";
-import {
-  Terminal,
-  TypingAnimation,
-  AnimatedSpan,
-} from "../components/ui/terminal.tsx";
-import { NumberTicker } from "../components/ui/number-ticker.tsx";
-import { useState, useEffect } from "react";
-import Button from "@/components/ui/go-btn.tsx";
-import LogoLoop from "@/components/ui/LogoLoop.tsx";
+  IconChevronRight,
+} from '@tabler/icons-react';
+import { categories } from '../components/site/IconExplorer/iconUtils.tsx';
+import { Terminal, TypingAnimation, AnimatedSpan } from '../components/ui/terminal.tsx';
+import { NumberTicker } from '../components/ui/number-ticker.tsx';
+import { useState, useEffect } from 'react';
+import LogoLoop from '@/components/ui/LogoLoop.tsx';
+import { Button } from '@/components/ui/button.tsx';
 
 const heroList = [
-  "BehanceFill",
-  "Dribbble",
-  "Fresh",
-  "ROG",
-  "Envato",
-  "PNPM",
-  "Slack",
-  "Chrome",
-  "AtlassianBitbucket",
-  "GoDaddy",
-  "AdobeInDesign",
-  "Discord",
+  'BehanceFill',
+  'Dribbble',
+  'Fresh',
+  'ROG',
+  'Envato',
+  'PNPM',
+  'Slack',
+  'Chrome',
+  'AtlassianBitbucket',
+  'GoDaddy',
+  'AdobeInDesign',
+  'Discord',
 ] as const;
 
 const loopIcon = [
-  "Razer",
-  "Debian",
-  "RedHat",
-  "Snapdragon",
-  "TypeScript",
-  "CSS",
-  "ReactQuery",
-  "Kotlin",
-  "GraphQL",
-  "VisualStudio",
-  "Bitwarden",
-  "HoundCI",
-  "NordVPN",
-  "Windows11",
-  "Filmora",
-  "Xing",
-  "Tor"
+  'Razer',
+  'Debian',
+  'RedHat',
+  'Snapdragon',
+  'TypeScript',
+  'CSS',
+  'ReactQuery',
+  'Kotlin',
+  'GraphQL',
+  'VisualStudio',
+  'Bitwarden',
+  'HoundCI',
+  'NordVPN',
+  'Windows11',
+  'Filmora',
+  'Xing',
+  'Tor',
 ] as const;
 
 export async function getStaticProps() {
-  const res = await fetch(
-    "https://api.npmjs.org/downloads/point/last-week/iconza",
-  );
+  const res = await fetch('https://api.npmjs.org/downloads/point/last-week/iconza');
   const data = await res.json();
 
   return {
@@ -77,44 +72,38 @@ export async function getStaticProps() {
   };
 }
 
-const words = ["Beautiful.", "Better.", "Modern.", "Scalable."];
+const words = ['Beautiful.', 'Better.', 'Modern.', 'Scalable.'];
 
 const features = [
   {
     icon: IconRocket,
-    title: "Lightning Fast",
-    description:
-      "Optimized SVG icons that load instantly. Tree-shakable imports mean you only bundle what you use.",
+    title: 'Lightning Fast',
+    description: 'Optimized SVG icons that load instantly. Tree-shakable imports mean you only bundle what you use.',
   },
   {
     icon: IconTextResize,
-    title: "Customizable",
-    description:
-      "Easily adjust size, color, and stroke width. Perfect for any design system or theme.",
+    title: 'Customizable',
+    description: 'Easily adjust size. Perfect for any design system or theme.',
   },
   {
     icon: IconColorFilter,
-    title: "Brand Perfect",
-    description:
-      "Authentic brand colors and consistent visual identity. Dark mode support built right in.",
+    title: 'Brand Perfect',
+    description: 'Authentic brand colors and consistent visual identity. Dark mode support built right in.',
   },
   {
     icon: IconBackground,
-    title: "Consistent Icons",
-    description:
-      "Uniform design language across all icons. Perfectly balanced for any UI or UX project.",
+    title: 'Consistent Icons',
+    description: 'Uniform design language across all icons. Perfectly balanced for any UI or UX project.',
   },
   {
     icon: IconLayersIntersect,
-    title: "Easy Integration",
-    description:
-      "Simple installation and usage. Works seamlessly with React, Vue, Angular, and plain HTML.",
+    title: 'Easy Integration',
+    description: 'Simple installation and usage. Works seamlessly with React and Next.js.',
   },
   {
     icon: IconSourceCode,
-    title: "Open Source",
-    description:
-      "Community-driven and open for contributions. Regular updates with new icons and features.",
+    title: 'Open Source',
+    description: 'Community-driven and open for contributions. Regular updates with new icons and features.',
   },
 ];
 
@@ -126,16 +115,16 @@ interface Stat {
 
 const steps = [
   {
-    title: "Install the package",
+    title: 'Install the package',
     description: "Run 'npm install iconza' in your project directory.",
   },
   {
-    title: "Import icons",
+    title: 'Import icons',
     description: "Import any icon from 'iconza' and use it in your components.",
   },
   {
-    title: "Customize",
-    description: "Adjust size, color, and stroke to fit your design system.",
+    title: 'Customize',
+    description: 'Adjust size, color, and stroke to fit your design system.',
   },
 ];
 
@@ -145,15 +134,13 @@ export function HomeHero() {
   useEffect(() => {
     async function fetchTotal() {
       try {
-        const startDate = "2024-01-01";
-        const endDate = new Date().toISOString().split("T")[0];
-        const response = await fetch(
-          `https://api.npmjs.org/downloads/point/${startDate}:${endDate}/iconza`,
-        );
+        const startDate = '2024-01-01';
+        const endDate = new Date().toISOString().split('T')[0];
+        const response = await fetch(`https://api.npmjs.org/downloads/point/${startDate}:${endDate}/iconza`);
         const data: { downloads?: number } = await response.json();
         setTotalDownloads(data.downloads ?? 0);
       } catch (err) {
-        console.error("Error fetching total downloads:", err);
+        console.error('Error fetching total downloads:', err);
         setTotalDownloads(0);
       }
     }
@@ -164,68 +151,63 @@ export function HomeHero() {
   }, []);
 
   const stats: Stat[] = [
-    { value: Object.keys(icons).length, label: "Total Icons" },
-    { value: 100, suffix: "%", label: "Open Source" },
-    { value: categories.length - 1, label: "Categories" },
-    { value: totalDownloads, label: "Total Downloads" },
+    { value: Object.keys(icons).length, label: 'Total Icons' },
+    { value: 100, suffix: '%', label: 'Open Source' },
+    { value: categories.length - 1, label: 'Categories' },
+    { value: totalDownloads, label: 'Total Downloads' },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-muted/40">
-      <SEO title="Iconza - Free React Icon Library" description="Animated, accessible, and developer-first icon set built for React, Tailwind, and Vite." />
+    <div className='to-muted/40 min-h-screen bg-gradient-to-b from-background'>
+      <SEO
+        title='Iconza - Free React Icon Library'
+        description='Animated, accessible, and developer-first icon set built for React, Tailwind, and Vite.'
+      />
       <SiteHeader />
       <main>
-        <section className="min-h-screen relative pt-24 overflow-hidden">
-          <HeroBackground className="absolute inset-0 w-full h-full z-0 pointer-events-none" />
-          <div className="relative z-10 mx-auto max-w-7xl px-4 py-12 mb-20 md:py-20 grid items-center gap-10 md:grid-cols-2">
+        <section className='relative min-h-screen overflow-hidden pt-24'>
+          <HeroBackground className='pointer-events-none absolute inset-0 z-0 h-full w-full' />
+          <div className='relative z-10 mx-auto mb-20 grid max-w-7xl items-center gap-10 px-4 py-12 md:grid-cols-2 md:py-20'>
             <div>
-              <p className="mt-2 inline-block rounded-full bg-primary/10 px-3 py-1 text-sm font-medium border border-primary/50 text-primary mb-6">
+              <p className='mb-6 mt-2 inline-block rounded-full border border-primary/50 bg-primary/10 px-3 py-1 text-sm font-medium text-primary'>
                 v{pkg.version}
               </p>
-              <h1 className="text-5xl md:text-7xl font-semibold text-balance">
+              <h1 className='text-balance text-5xl font-semibold md:text-7xl'>
                 Every icon you need.
-                <FlipWords
-                  words={words}
-                  className="font-normal text-primary"
-                />
+                <FlipWords words={words} className='font-normal text-primary' />
               </h1>
 
-              <p className="mt-4 text-xl max-w-prose text-muted-foreground mb-8">
-                A modern, accessible icon set with original brand colors, full
-                TypeScript support, and delightful animations.
+              <p className='text-muted-foreground mb-8 mt-4 max-w-prose text-xl'>
+                A modern, accessible icon set with original brand colors, full TypeScript support, and delightful animations.
               </p>
-              <div className="space-y-6">
-                <CodeBlock
-                  language="bash"
-                  filename="terminal"
-                  code={`npm install iconza`}
-                />
+              <div className='space-y-6'>
+                <CodeBlock language='bash' filename='terminal' code={`npm install iconza`} />
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
-                  className="flex flex-col sm:flex-row gap-4"
+                  className='flex flex-col gap-4 sm:flex-row'
                 >
-                  <Link to="/icons">
-                    <button className="group relative inline-flex h-12 overflow-hidden rounded-full p-px">
-                      <div className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,theme(colors.blue.500)_0%,theme(colors.black)_50%,theme(colors.blue.500)_100%)]"/>
-                      <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-                        <IconArrowRight
-                          size={20}
-                          className="mr-2 transform transition-transform duration-300 group-hover:translate-x-28"
-                        />
-                        <span className="transform transition-transform duration-300 group-hover:-translate-x-6">
-                          Explore All Icons
-                        </span>
-                      </span>
-                    </button>
+                  <Link to='/icons'>
+                    <Button variant='on-hold' className='group flex items-center gap-2'>
+                      Explore Icons
+                      <IconArrowLeft className='transition-transform duration-300 group-hover:rotate-180' />
+                    </Button>
                   </Link>
-                  <Button color="#3B82F6" text="View Document" to="/docs" />
+                  <Link to='/docs'>
+                    <Button variant='design-review' className='group flex items-center gap-2'>
+                      View Docs
+                      <span className='relative flex items-center'>
+                        <IconChevronRight className='transition-transform duration-300 group-hover:translate-x-1' />
+                        <IconChevronRight className='absolute left-2 opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100' />
+                      </span>
+                    </Button>
+                  </Link>
                 </motion.div>
               </div>
             </div>
 
-            <div className="grid grid-cols-3 gap-4">
+            <div className='grid grid-cols-3 gap-4'>
               {heroList.map((name, index) => {
                 const Comp = icons[name];
                 return (
@@ -235,7 +217,7 @@ export function HomeHero() {
                     animate={{ opacity: 1, y: 0 }}
                     viewport={{ once: false, amount: 0.3 }}
                     transition={{ duration: 0.4, delay: index * 0.05 }}
-                    className="flex items-center justify-center rounded-3xl border border-white/20 p-6 backdrop-blur-sm bg-white/5"
+                    className='flex items-center justify-center rounded-3xl border border-white/20 bg-white/5 p-6 backdrop-blur-sm'
                   >
                     <Comp size={48} aria-label={name} />
                   </motion.div>
@@ -245,103 +227,85 @@ export function HomeHero() {
           </div>
 
           <LogoLoop
-            logos={loopIcon.map(name => ({
+            logos={loopIcon.map((name) => ({
               component: icons[name],
-              name: name
+              name: name,
             }))}
             speed={70}
-            direction="left"
+            direction='left'
             logoHeight={40}
             gap={40}
             fadeOut
-            fadeOutColor="#000000"
-            ariaLabel="Technology partners"
+            fadeOutColor='#000000'
+            ariaLabel='Technology partners'
           />
         </section>
 
-
         {/* Features Section */}
-        <section className="py-24 bg-gray-950/50">
-          <div className="max-w-7xl mx-auto px-4 text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary border border-primary/20 px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
-              <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
+        <section className='bg-gray-950/50 py-24'>
+          <div className='mx-auto mb-16 max-w-7xl px-4 text-center'>
+            <div className='mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1.5 text-xs font-medium text-primary sm:mb-6 sm:px-4 sm:text-sm'>
+              <div className='h-1.5 w-1.5 rounded-full bg-primary'></div>
               Overview
             </div>
-            <h2 className="text-3xl sm:text-6xl font-medium text-white uppercase">
-              Why Choose iconza?
-            </h2>
-            <p className="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
-              Built by developers, for developers. Every icon is crafted with
-              attention to detail and optimized for modern web applications.
+            <h2 className='text-3xl font-medium uppercase text-white sm:text-6xl'>Why Choose iconza?</h2>
+            <p className='mx-auto mt-4 max-w-2xl text-lg text-gray-300'>
+              Built by developers, for developers. Every icon is crafted with attention to detail and optimized for modern web applications.
             </p>
           </div>
 
           {/* Features */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-4 mb-20">
+          <div className='mx-auto mb-20 grid max-w-7xl grid-cols-1 gap-8 px-4 md:grid-cols-2 lg:grid-cols-3'>
             {features.map(({ icon: Icon, title, description }, i) => (
               <motion.div
                 key={title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="text-center p-8 rounded-2xl bg-gray-900/50 shadow-lg border border-gray-700"
+                className='rounded-2xl border border-gray-700 bg-gray-900/50 p-8 text-center shadow-lg'
               >
-                <div
-                  className={`w-12 h-12 mx-auto mb-6 rounded-2xl bg-primary/10 flex items-center justify-center`}
-                >
-                  <Icon className={`w-6 h-6 text-primary`} />
+                <div className={`mx-auto mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10`}>
+                  <Icon size={25} stroke={1.5} className={`text-primary`} />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">
-                  {title}
-                </h3>
-                <p className="text-gray-400">
-                  {description}
-                </p>
+                <h3 className='mb-4 text-xl font-semibold text-white'>{title}</h3>
+                <p className='text-gray-400'>{description}</p>
               </motion.div>
             ))}
           </div>
 
           {/* Stats */}
-          <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className='mx-auto grid max-w-7xl grid-cols-2 gap-8 px-4 text-center md:grid-cols-4'>
             {stats.map(({ value, label, suffix }) => (
               <div key={label}>
-                <NumberTicker
-                  value={value}
-                  suffix={suffix}
-                  className="text-7xl font-medium tracking-tighter text-primary"
-                />
-                <div className="text-sm text-gray-400">
-                  {label}
-                </div>
+                <NumberTicker value={value} suffix={suffix} className='text-7xl font-semibold tracking-tighter text-primary' />
+                <div className='text-sm text-gray-400'>{label}</div>
               </div>
             ))}
           </div>
         </section>
 
         {/* Getting Started Section */}
-        <section className="py-24">
+        <section className='py-24'>
           {/* Heading with motion */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.3 }}
             transition={{ duration: 0.5 }}
-            className="max-w-7xl mx-auto px-4 text-center mb-16"
+            className='mx-auto mb-16 max-w-7xl px-4 text-center'
           >
-            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary border border-primary/20 px-3 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
-              <div className="h-1.5 w-1.5 rounded-full bg-primary"></div>
+            <div className='mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1.5 text-xs font-medium text-primary sm:mb-6 sm:px-4 sm:text-sm'>
+              <div className='h-1.5 w-1.5 rounded-full bg-primary'></div>
               Quick Start
             </div>
-            <h2 className="text-3xl sm:text-6xl font-medium text-white uppercase">
-              Get Started in Minutes
-            </h2>
-            <p className="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
+            <h2 className='text-3xl font-medium uppercase text-white sm:text-6xl'>Get Started in Minutes</h2>
+            <p className='mx-auto mt-4 max-w-2xl text-lg text-gray-300'>
               Install iconza and start building beautiful interfaces right away.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto px-4">
-            <div className="space-y-6">
+          <div className='mx-auto grid max-w-7xl items-center gap-12 px-4 md:grid-cols-2'>
+            <div className='space-y-6'>
               {steps.map((step, i) => (
                 <motion.div
                   key={step.title}
@@ -349,20 +313,14 @@ export function HomeHero() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: false, amount: 0.3 }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="flex items-start gap-4"
+                  className='flex items-start gap-4'
                 >
-                  <div className="w-8 h-8 rounded-full bg-blue-500/10 flex items-center justify-center mt-1">
-                    <span className="text-blue-500 font-semibold text-sm">
-                      {i + 1}
-                    </span>
+                  <div className='mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-blue-500/10'>
+                    <span className='text-sm font-semibold text-blue-500'>{i + 1}</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-white mb-2">
-                      {step.title}
-                    </h3>
-                    <p className="text-gray-400">
-                      {step.description}
-                    </p>
+                    <h3 className='mb-2 font-semibold text-white'>{step.title}</h3>
+                    <p className='text-gray-400'>{step.description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -373,21 +331,13 @@ export function HomeHero() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: steps.length * 0.1 }}
-                className="pt-6"
+                className='pt-6'
               >
-                <Link to="/icons">
-                  <button className="group relative inline-flex h-12 overflow-hidden rounded-full p-px">
-                    <div className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,theme(colors.blue.500)_0%,theme(colors.black)_50%,theme(colors.blue.500)_100%)]"/>
-                    <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-                      <IconArrowRight
-                        size={20}
-                        className="mr-2 transform transition-transform duration-300 group-hover:translate-x-28"
-                      />
-                      <span className="transform transition-transform duration-300 group-hover:-translate-x-6">
-                        Get Started Now
-                      </span>
-                    </span>
-                  </button>
+                <Link to='/icons'>
+                  <Button variant='on-hold' className='group flex items-center gap-2'>
+                    Get Started
+                    <IconArrowLeft className='transition-transform duration-300 group-hover:rotate-180' />
+                  </Button>
                 </Link>
               </motion.div>
             </div>
@@ -400,24 +350,12 @@ export function HomeHero() {
               transition={{ duration: 0.5, delay: 0.4 }}
             >
               <Terminal>
-                <TypingAnimation delay={0}>
-                  $ npm install iconza
-                </TypingAnimation>
-                <AnimatedSpan className="text-primary">
-                  ✔ Installed successfully!
-                </AnimatedSpan>
-                <AnimatedSpan className="text-blue-500">
-                  ℹ Updated 1 file:
-                </AnimatedSpan>
-                <AnimatedSpan className="text-blue-500 pl-2">
-                  - package.json
-                </AnimatedSpan>
-                <TypingAnimation className="text-muted-foreground">
-                  Project initialization completed.
-                </TypingAnimation>
-                <TypingAnimation className="text-muted-foreground">
-                  You may now add components.
-                </TypingAnimation>
+                <TypingAnimation delay={0}>$ npm install iconza</TypingAnimation>
+                <AnimatedSpan className='text-primary'>✔ Installed successfully!</AnimatedSpan>
+                <AnimatedSpan className='text-blue-500'>ℹ Updated 1 file:</AnimatedSpan>
+                <AnimatedSpan className='pl-2 text-blue-500'>- package.json</AnimatedSpan>
+                <TypingAnimation className='text-muted-foreground'>Project initialization completed.</TypingAnimation>
+                <TypingAnimation className='text-muted-foreground'>You may now add components.</TypingAnimation>
               </Terminal>
             </motion.div>
           </div>

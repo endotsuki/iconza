@@ -4,18 +4,9 @@
 
 /* Preload critical fonts */
 @font-face {
-  font-family: 'Outfit';
-  src: url('/fonts/Outfit-VariableFont_wght.ttf') format('truetype-variations');
+  font-family: 'PlusJakarta';
+  src: url('/fonts/PlusJakartaSans.woff2') format('woff2');
   font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'Alexandria';
-  src: url('/fonts/Alexandria-VariableFont.ttf') format('truetype-variations');
-  font-weight: 200 800;
   font-style: normal;
   font-display: swap;
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
@@ -35,13 +26,16 @@
     --foreground: 222.2 84% 4.9%;
 
     /* Semantic theme colors */
-    --color-primary: #3b82f6; /* Tailwind blue-500 */
+    --color-primary: #3b82f6;
+    /* Tailwind blue-500 */
     --color-primary-foreground: #ffffff;
 
-    --color-secondary: #6366f1; /* Tailwind indigo-500 */
+    --color-secondary: #6366f1;
+    /* Tailwind indigo-500 */
     --color-secondary-foreground: #ffffff;
 
-    --color-asset: #10b981; /* Tailwind green-500 */
+    --color-asset: #10b981;
+    /* Tailwind green-500 */
     --color-asset-foreground: #ffffff;
 
     /* ... keep only the colors you actually use ... */
