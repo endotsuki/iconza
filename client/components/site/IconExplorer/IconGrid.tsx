@@ -1,20 +1,20 @@
-import { AnimatePresence, motion } from "framer-motion";
-import { IconItem } from "./IconItem";
-import { IconEmptyState } from "./IconEmptyState";
-import { icons } from "../../../../packages/iconza/src";
+import { AnimatePresence, motion } from 'framer-motion';
+import { IconItem } from './IconItem';
+import { IconEmptyState } from './IconEmptyState';
+import { icons } from '../../../../packages/iconza/src';
 
 export function IconGrid({ category, size, query, data, viewMode }) {
-  const visible = data.filter((i) => category === "All" || i.category === category);
+  const visible = data.filter((i) => category === 'All' || i.category === category);
 
   if (!visible.length) return <IconEmptyState query={query} />;
 
   const gridClasses =
-    viewMode === "grid"
-      ? "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-6 gap-3 sm:gap-4"
-      : "flex flex-col gap-2";
+    viewMode === 'grid'
+      ? 'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-6 gap-3 sm:gap-4'
+      : 'flex flex-col gap-2';
 
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence mode='wait'>
       <motion.div
         key={category + query + viewMode}
         initial={{ opacity: 0, y: 10 }}

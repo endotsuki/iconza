@@ -181,7 +181,15 @@ export function HomeHero() {
                 A modern, accessible icon set with original brand colors, full TypeScript support, and delightful animations.
               </p>
               <div className='space-y-6'>
-                <CodeBlock language='bash' filename='terminal' code={`npm install iconza`} />
+                {/* <CodeBlock language='bash' filename='terminal' code={`npm install iconza`} /> */}
+                <CodeBlock
+                  tabs={[
+                    { name: 'Yarn', code: 'yarn add iconza', language: 'bash' },
+                    { name: 'NPM', code: 'npm install iconza', language: 'bash' },
+                    { name: 'PNPM', code: 'pnpm add iconza', language: 'bash' },
+                  ]}
+                />
+
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
