@@ -6,15 +6,10 @@ interface LoadingProps {
 
 export function Loading({ className }: LoadingProps) {
   return (
-    <div className={cn(
-      'fixed inset-0 z-50',
-      'flex items-center justify-center',
-      'bg-black backdrop-blur-sm',
-      className
-    )}>
-      <div className="spinner">
+    <div className={cn('fixed inset-0 z-50', 'flex items-center justify-center', 'bg-black/10 backdrop-blur-sm', className)}>
+      <div className='spinner'>
         {[...Array(6)].map((_, i) => (
-          <div key={i} className="spinner-face" />
+          <div key={i} className='spinner-face' />
         ))}
       </div>
 
@@ -31,7 +26,7 @@ export function Loading({ className }: LoadingProps) {
           height: 100%;
           position: absolute;
           width: 100%;
-          border: 1px solid #94c748;
+          border: 1px solid #3B82F6;
         }
 
         .spinner-face:nth-of-type(1) {

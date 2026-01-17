@@ -181,7 +181,6 @@ export function HomeHero() {
                 A modern, accessible icon set with original brand colors, full TypeScript support, and delightful animations.
               </p>
               <div className='space-y-6'>
-                {/* <CodeBlock language='bash' filename='terminal' code={`npm install iconza`} /> */}
                 <CodeBlock
                   tabs={[
                     { name: 'Yarn', code: 'yarn add iconza', language: 'bash' },
@@ -206,8 +205,8 @@ export function HomeHero() {
                     <Button variant='design-review' className='group flex items-center gap-2'>
                       View Docs
                       <span className='relative flex items-center'>
-                        <IconChevronRight className='transition-transform duration-300 group-hover:translate-x-1' />
                         <IconChevronRight className='absolute left-2 opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100' />
+                        <IconChevronRight className='transition-transform duration-300 group-hover:translate-x-1' />
                       </span>
                     </Button>
                   </Link>
@@ -241,10 +240,10 @@ export function HomeHero() {
             }))}
             speed={70}
             direction='left'
-            logoHeight={40}
+            logoHeight={50}
             gap={40}
             fadeOut
-            fadeOutColor='#000000'
+            fadeOutColor='#0f172a'
             ariaLabel='Technology partners'
           />
         </section>
@@ -270,10 +269,10 @@ export function HomeHero() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className='rounded-2xl border border-gray-700 bg-gray-900/50 p-8 text-center shadow-lg'
+                className='rounded-3xl border border-gray-700 bg-gray-900/50 p-8 text-center shadow-lg'
               >
-                <div className={`mx-auto mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10`}>
-                  <Icon size={25} stroke={1.5} className={`text-primary`} />
+                <div className='mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-primary/10 p-3'>
+                  <Icon size='30' stroke={1.5} className='text-primary' />
                 </div>
                 <h3 className='mb-4 text-xl font-semibold text-white'>{title}</h3>
                 <p className='text-gray-400'>{description}</p>
