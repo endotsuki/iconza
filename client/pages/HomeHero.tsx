@@ -8,126 +8,20 @@ import { FlipWords } from '../components/ui/flip-words.tsx';
 import { SiteHeader } from '../components/site/SiteHeader.tsx';
 import { SiteFooter } from '../components/site/SiteFooter.tsx';
 import { HeroBackground } from '../components/ui/shap-loading-hero.tsx';
-import {
-  IconArrowLeft,
-  IconMeteorFilled,
-  IconColorFilter,
-  IconTransformPoint,
-  IconBackground,
-  IconLayersIntersect2,
-  IconCodeAsterisk,
-  IconChevronRight,
-  IconPackage,
-} from '@tabler/icons-react';
 import { categories } from '../components/site/IconExplorer/iconUtils.tsx';
 import { Terminal, TypingAnimation, AnimatedSpan } from '../components/ui/terminal.tsx';
 import { NumberTicker } from '../components/ui/number-ticker.tsx';
 import { useState, useEffect } from 'react';
 import LogoLoop from '@/components/ui/LogoLoop.tsx';
 import { Button } from '@/components/ui/button.tsx';
-
-const heroList = [
-  'BehanceFill',
-  'Dribbble',
-  'Fresh',
-  'ROG',
-  'Envato',
-  'PNPM',
-  'Slack',
-  'Chrome',
-  'AtlassianBitbucket',
-  'GoDaddy',
-  'AdobeInDesign',
-  'Discord',
-] as const;
-
-const loopIcon = [
-  'Razer',
-  'Debian',
-  'RedHat',
-  'Snapdragon',
-  'TypeScript',
-  'CSS',
-  'ReactQuery',
-  'Kotlin',
-  'GraphQL',
-  'VisualStudio',
-  'Bitwarden',
-  'HoundCI',
-  'NordVPN',
-  'Windows11',
-  'Filmora',
-  'Xing',
-  'Tor',
-] as const;
-
-export async function getStaticProps() {
-  const res = await fetch('https://api.npmjs.org/downloads/point/last-week/iconza');
-  const data = await res.json();
-
-  return {
-    props: {
-      downloadsLastWeek: data.downloads,
-    },
-    revalidate: 3600,
-  };
-}
-
-const words = ['Beautiful.', 'Better.', 'Modern.', 'Scalable.'];
-
-const features = [
-  {
-    icon: IconMeteorFilled,
-    title: 'Lightning Fast',
-    description: 'Optimized SVG icons that load instantly. Tree-shakable imports mean you only bundle what you use.',
-  },
-  {
-    icon: IconTransformPoint,
-    title: 'Customizable',
-    description: 'Easily adjust size. Perfect for any design system or theme.',
-  },
-  {
-    icon: IconColorFilter,
-    title: 'Brand Perfect',
-    description: 'Authentic brand colors and consistent visual identity. Dark mode support built right in.',
-  },
-  {
-    icon: IconBackground,
-    title: 'Consistent Icons',
-    description: 'Uniform design language across all icons. Perfectly balanced for any UI or UX project.',
-  },
-  {
-    icon: IconLayersIntersect2,
-    title: 'Easy Integration',
-    description: 'Simple installation and usage. Works seamlessly with React and Next.js.',
-  },
-  {
-    icon: IconCodeAsterisk,
-    title: 'Open Source',
-    description: 'Community-driven and open for contributions. Regular updates with new icons and features.',
-  },
-];
+import { IconArrowLeft, IconChevronRight, IconPackage } from '@tabler/icons-react';
+import { features, heroList, loopIcon, steps, words } from '@/data/homeData.tsx';
 
 interface Stat {
   value: number;
   suffix?: string;
   label: string;
 }
-
-const steps = [
-  {
-    title: 'Install the package',
-    description: "Run 'npm install iconza' in your project directory.",
-  },
-  {
-    title: 'Import icons',
-    description: "Import any icon from 'iconza' and use it in your components.",
-  },
-  {
-    title: 'Customize',
-    description: 'Adjust size, color, and stroke to fit your design system.',
-  },
-];
 
 export function HomeHero() {
   const [totalDownloads, setTotalDownloads] = useState<number>(0);
