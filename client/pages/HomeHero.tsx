@@ -10,13 +10,14 @@ import { SiteFooter } from '../components/site/SiteFooter.tsx';
 import { HeroBackground } from '../components/ui/shap-loading-hero.tsx';
 import {
   IconArrowLeft,
-  IconRocket,
+  IconMeteorFilled,
   IconColorFilter,
-  IconTextResize,
+  IconTransformPoint,
   IconBackground,
-  IconLayersIntersect,
-  IconSourceCode,
+  IconLayersIntersect2,
+  IconCodeAsterisk,
   IconChevronRight,
+  IconPackage,
 } from '@tabler/icons-react';
 import { categories } from '../components/site/IconExplorer/iconUtils.tsx';
 import { Terminal, TypingAnimation, AnimatedSpan } from '../components/ui/terminal.tsx';
@@ -76,12 +77,12 @@ const words = ['Beautiful.', 'Better.', 'Modern.', 'Scalable.'];
 
 const features = [
   {
-    icon: IconRocket,
+    icon: IconMeteorFilled,
     title: 'Lightning Fast',
     description: 'Optimized SVG icons that load instantly. Tree-shakable imports mean you only bundle what you use.',
   },
   {
-    icon: IconTextResize,
+    icon: IconTransformPoint,
     title: 'Customizable',
     description: 'Easily adjust size. Perfect for any design system or theme.',
   },
@@ -96,12 +97,12 @@ const features = [
     description: 'Uniform design language across all icons. Perfectly balanced for any UI or UX project.',
   },
   {
-    icon: IconLayersIntersect,
+    icon: IconLayersIntersect2,
     title: 'Easy Integration',
     description: 'Simple installation and usage. Works seamlessly with React and Next.js.',
   },
   {
-    icon: IconSourceCode,
+    icon: IconCodeAsterisk,
     title: 'Open Source',
     description: 'Community-driven and open for contributions. Regular updates with new icons and features.',
   },
@@ -169,9 +170,9 @@ export function HomeHero() {
           <HeroBackground className='pointer-events-none absolute inset-0 z-0 h-full w-full' />
           <div className='relative z-10 mx-auto mb-20 grid max-w-7xl items-center gap-10 px-4 py-12 md:grid-cols-2 md:py-20'>
             <div>
-              <p className='mb-6 mt-2 inline-block rounded-full border border-primary/50 bg-primary/10 px-3 py-1 text-sm font-medium text-primary'>
-                v{pkg.version}
-              </p>
+              <div className='mb-6 flex w-fit items-center gap-1 rounded-full border border-secondary/50 bg-primary/10 px-3 py-2 text-sm font-medium text-secondary'>
+                <IconPackage size={20} stroke={1.5} />v{pkg.version}
+              </div>
               <h1 className='text-balance text-5xl font-semibold md:text-7xl'>
                 Every icon you need.
                 <FlipWords words={words} className='font-normal text-primary' />
